@@ -33,7 +33,8 @@ body {
 .header__myAccount,
 .search__button-search,
 .menu,
-.menu__link {
+.menu__link,
+.slider__back {
   display: flex;
   align-items: center;
 }
@@ -89,6 +90,10 @@ body {
   height: 100%;
   border: 1px solid #e6e6e6;
   border-right: 0;
+  color: #a4a4a4;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.35px;
 }
 .search__button-search {
   color: #a4a4a4;
@@ -123,4 +128,32 @@ body {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
+}
+.slider {
+  height: 562px;
+  background-color: #e8e8e8;
+}
+.slider__back {
+  height: 100%;
+  background: url(img/slider_back.jpg);
+  background-position-y: -50px;
+}
+.slider__inscription {
+  border-left: 12px solid #f16d7f;
+  padding-left: 12px;
+}
+.slider__words {
+  color: #222222;
+  font-size: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 32px;
+  margin-top: 15px;
+}
+.slider__big-words {
+  font-size: 60px;
+  letter-spacing: 1.5px;
+  line-height: 43px;
+  margin-top: 0;
 }
