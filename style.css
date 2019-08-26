@@ -34,7 +34,8 @@ body {
 .search__button-search,
 .menu,
 .menu__link,
-.slider__back {
+.slider__back,
+.category {
   display: flex;
   align-items: center;
 }
@@ -42,7 +43,8 @@ body {
 .header__left-side,
 .header__right-side,
 .search,
-.search__window {
+.search__window,
+.category {
   justify-content: space-between;
 }
 .header__myAccount,
@@ -156,4 +158,35 @@ body {
   letter-spacing: 1.5px;
   line-height: 43px;
   margin-top: 0;
+}
+.banner1{
+  background: url(img/banner1.jpg)
+}
+.banner2{
+  background: url(img/banner2.jpg)
+}
+.banner3{
+  background: url(img/banner3.jpg)
+}
+.banner4{
+  background: url(img/banner4.jpg)
+}
+/*.category{
+  flex-wrap: wrap;
+  flex-direction: column;
+}*/
+
+.category__big-banner,
+.category__little-banner{
+width: 560px;
+}
+.category__big-banner{
+  height: 542px;
+}
+.category__little-banner{
+  height: 261px;
+}
+.category__big-banner:first-child,
+.category__little-banner:first-child{
+  margin-bottom: 20px;
 }
