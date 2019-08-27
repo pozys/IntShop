@@ -268,11 +268,15 @@ body {
   font-weight: 700;
   border: 1px solid #ffffff;
 }
-.featuredItems__add-to-cart>.cart{
+.featuredItems__add-to-cart > .cart {
   margin-right: 8px;
 }
 .featuredItems__image-block:hover .featuredItems__item-hover {
   display: block;
+}
+.featuredItems__image-block:hover .featured__text {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
+  background-color: #ffffff;
 }
 .featuredItems__item1 {
   background-image: url(img/Featured-Items1.jpg);
@@ -313,8 +317,8 @@ body {
 }
 .featured__text__pink {
   padding-top: 17px;
+  padding-bottom: 20px;
   color: #f16d7f;
   font-size: 16px;
   font-weight: 700;
-  height: 281px;
 }
