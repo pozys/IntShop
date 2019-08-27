@@ -239,7 +239,6 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: flex-start;
-  margin-bottom: 20px; /*Временно*/
 }
 .featuredItems__image-block {
   width: 261px;
@@ -321,4 +320,24 @@ body {
   color: #f16d7f;
   font-size: 16px;
   font-weight: 700;
+}
+.browseAllProducts {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #f16d7f;
+  letter-spacing: 0.4px;
+  padding: 18px 19px 18px 24px;
+  display: inline-block;
+  margin-top: 30px;
+  margin-bottom: 30px; /*Временно*/
+}
+.browseAllProducts>span{
+  padding-right: 9px; /*Расстояние между надписью и стрелкой*/
+}
+.fa-long-arrow-alt-right{
+  opacity: 0;
+}
+.browseAllProducts:hover .fa-long-arrow-alt-right{
+  opacity: 100;
 }
