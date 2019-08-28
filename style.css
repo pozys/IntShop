@@ -134,6 +134,9 @@ body {
   width: 38px;
   box-sizing: border-box;
 }
+input[type="text"]{
+  padding: 0 10px;
+}
 .header__myAccount {
   width: 130px;
   height: 38px;
@@ -307,6 +310,9 @@ body {
   font-weight: 700;
   border: 1px solid #ffffff;
 }
+.featuredItems__add-to-cart:hover{
+  box-shadow: 0 0 10px #ffffff;
+}
 .featuredItems__add-to-cart > .cart {
   margin-right: 8px;
 }
@@ -348,6 +354,7 @@ body {
   padding-left: 15px;
 }
 .featured__text__black {
+  display: block;
   padding-top: 19px;
   color: #222222;
   font-size: 13px;
