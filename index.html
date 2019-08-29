@@ -13,13 +13,19 @@
     <title>Index</title>
   </head>
   <body>
-    <div class="header">
+    <header class="header">
       <div class="container head">
         <div class="header__left-side">
-          <a href="#" class="logo-group"><img src="img/logo.png" alt="logo" class="logo" />
-            <div class="header__brand-name">BRAN<span class="pink">D</span></div></a>
+          <a href="#" class="logo-group"
+            ><img src="img/logo.png" alt="logo" class="logo" />
+            <div class="header__brand-name">
+              BRAN<span class="pink">D</span>
+            </div></a
+          >
           <form action="#" class="search">
-            <button class="search__browse-button"><span>Browse </span><i class="fas fa-caret-down"></i></button>
+            <button class="search__browse-button">
+              <span>Browse </span><i class="fas fa-caret-down"></i>
+            </button>
             <div class="search__window">
               <input type="text" placeholder="Search for Item..." />
               <a href="#" class="search__button-search"
@@ -29,20 +35,26 @@
           </form>
         </div>
         <div class="header__right-side">
-          <a href="#"><img src="img/cart.svg" alt="cart" class="cart" /></a>
-          <a href="#" class="header__myAccount"><span>My Account </span><i class="fas fa-caret-down"></i></a>
+          <a href="#"><img src="img/cart.svg" alt="cart" class="cart"/></a>
+          <a href="#" class="header__myAccount"
+            ><span>My Account </span><i class="fas fa-caret-down"></i
+          ></a>
         </div>
       </div>
-    </div>
-    <ul class="menu">
-      <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
-      <li class="menu__item"><a href="#" class="menu__link">Man</a></li>
-      <li class="menu__item"><a href="#" class="menu__link">Women</a></li>
-      <li class="menu__item"><a href="#" class="menu__link">Kids</a></li>
-      <li class="menu__item"><a href="#" class="menu__link">Accoseriese</a></li>
-      <li class="menu__item"><a href="#" class="menu__link">Featured</a></li>
-      <li class="menu__item"><a href="#" class="menu__link">Hot Deals</a></li>
-    </ul>
+    </header>
+    <nav>
+      <ul class="menu">
+        <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Man</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Women</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Kids</a></li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Accoseriese</a>
+        </li>
+        <li class="menu__item"><a href="#" class="menu__link">Featured</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Hot Deals</a></li>
+      </ul>
+    </nav>
     <div class="slider">
       <div class="container slider__back">
         <div class="slider__inscription">
@@ -83,7 +95,7 @@
         </div>
       </div>
     </div>
-    <div class="featuredItems container">
+    <section class="featuredItems container">
       <div class="featuredItems__title">Fetured Items</div>
       <div class="featuredItems__subtitle">
         Shop for items based on what we featured in this week
@@ -206,6 +218,14 @@
         ><span>Browse All Product</span
         ><i class="fas fa-long-arrow-alt-right"></i
       ></a>
+    </section>
+    <div class="feature container">
+      <div class="feature__banner"></div>
+      <div class="feature__box-container">
+        <div class="feature__box"></div>
+        <div class="feature__box"></div>
+        <div class="feature__box"></div>
+      </div>
     </div>
   </body>
 </html>

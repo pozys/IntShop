@@ -1,3 +1,9 @@
+@color-pink: #f16d7f;
+@greyBorderColor: #e6e6e6;
+@color-white: #ffffff;
+@container-width: 1140px;
+@feature__banner-width: 767px;
+
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +21,7 @@ body {
 }
 .header {
   border: 1px solid #ececec;
-  background-color: #ffffff;
+  background-color: @color-white;
 }
 .head {
   height: 100px;
@@ -63,39 +69,41 @@ body {
 .header__brand-name {
   color: #222222;
   font-size: 27px;
+  font-weight: 300;
   text-transform: uppercase;
   font-weight: 300;
   letter-spacing: 0.68px;
   margin-left: 13px;
 }
 .pink {
-  color: #f16d7f;
+  color: @color-pink;
   font-weight: 600;
 }
+
 .search {
   height: 38px;
   margin-left: 37px;
 }
+
 .search > .search__browse-button:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
 }
 .search > .search__browse-button:active {
   background-image: linear-gradient(to bottom, #c0c0c0 0%, #a5a5a5 100%);
-  color: #ffffff;
+  color: @color-white;
 }
 .search > .search__browse-button:active .fa-caret-down {
-  color: #ffffff;
+  color: @color-white;
 }
 .search > .search__browse-button:focus {
   outline: none;
 }
 .search > .search__browse-button {
-  font-family: inherit;
-  /*Шрифт перебивался другими стилями для класса button*/
+  font-family: inherit; /*Шрифт перебивался другими стилями для класса button*/
   width: 87px;
   height: 38px;
   border-radius: 3px 0 0 3px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid @greyBorderColor;
   background-color: #cdcdcc;
   background-image: linear-gradient(to bottom, #f9f9f9 0%, #f5f5f5 100%);
 }
@@ -110,12 +118,11 @@ body {
   height: 100%;
 }
 .search__window > input {
-  font-family: inherit;
-  /*Шрифт перебивался другими стилями для класса input*/
+  font-family: inherit; /*Шрифт перебивался другими стилями для класса input*/
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  border: 1px solid #e6e6e6;
+  border: 1px solid @greyBorderColor;
   border-right: 0;
   color: #a4a4a4;
   font-size: 14px;
@@ -128,8 +135,8 @@ body {
   font-weight: 400;
   letter-spacing: 0.35px;
   border-radius: 0 3px 3px 0;
-  border: 1px solid #e6e6e6;
-  background-color: #ffffff;
+  border: 1px solid @greyBorderColor;
+  background-color: @color-white;
   height: 100%;
   width: 38px;
   box-sizing: border-box;
@@ -140,15 +147,15 @@ input[type="text"] {
 .header__myAccount {
   width: 130px;
   height: 38px;
-  background-color: #f16d7f;
-  color: #ffffff;
+  background-color: @color-pink;
+  color: @color-white;
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.38px;
   margin-left: 45px;
 }
 .header__myAccount .fa-caret-down {
-  color: #ffffff;
+  color: @color-white;
   font-size: 14px;
   letter-spacing: 0.35px;
   margin-left: 5px;
@@ -172,10 +179,10 @@ input[type="text"] {
   text-transform: uppercase;
 }
 .menu__link:hover {
-  background-color: #d8d7d7;
+  background-color: rgb(216, 215, 215);
 }
 .menu__link:active {
-  color: #ffffff;
+  color: @color-white;
   background-color: #ccc;
 }
 .slider {
@@ -188,7 +195,7 @@ input[type="text"] {
   background-position-y: -50px;
 }
 .slider__inscription {
-  border-left: 12px solid #f16d7f;
+  border-left: 12px solid @color-pink;
   padding-left: 12px;
 }
 .slider__words {
@@ -223,10 +230,11 @@ input[type="text"] {
 }
 .category__inscription {
   padding: 16px 20px;
-  background-color: #ffffff;
+  background-color: @color-white;
   display: inline-block;
   margin-top: 26px;
 }
+
 .category__big-banner,
 .category__little-banner {
   background-color: #dadad2;
@@ -255,7 +263,7 @@ input[type="text"] {
   letter-spacing: 0.45px;
 }
 .category__pink {
-  color: #f16d7f;
+  color: @color-pink;
   font-size: 30px;
   letter-spacing: 0.75px;
 }
@@ -304,13 +312,13 @@ input[type="text"] {
 .featuredItems__add-to-cart {
   margin: 0 70px;
   height: 39px;
-  color: #ffffff;
+  color: @color-white;
   font-size: 13px;
   font-weight: 700;
-  border: 1px solid #ffffff;
+  border: 1px solid @color-white;
 }
 .featuredItems__add-to-cart:hover {
-  box-shadow: 0 0 10px #ffffff;
+  box-shadow: 0 0 10px @color-white;
 }
 .featuredItems__add-to-cart > .cart {
   margin-right: 8px;
@@ -320,7 +328,7 @@ input[type="text"] {
 }
 .featuredItems__image-block:hover .featured__text {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
-  background-color: #ffffff;
+  background-color: @color-white;
 }
 .featuredItems__item1 {
   background-image: url(img/Featured-Items1.jpg);
@@ -347,7 +355,7 @@ input[type="text"] {
   background-image: url(img/Featured-Items8.jpg);
 }
 .featured__text {
-  background-color: #ffffff;
+  background-color: @color-white;
   text-align: left;
   text-transform: uppercase;
   padding-left: 15px;
@@ -361,30 +369,28 @@ input[type="text"] {
   line-height: 11px;
 }
 .featured__text__black:hover {
-  color: #f16d7f;
+  color: @color-pink;
 }
 .featured__text__pink {
   padding-top: 17px;
   padding-bottom: 20px;
-  color: #f16d7f;
+  color: @color-pink;
   font-size: 16px;
   font-weight: 700;
 }
 .browseAllProducts {
-  color: #ffffff;
+  color: @color-white;
   font-size: 16px;
   font-weight: 700;
-  background-color: #f16d7f;
+  background-color: @color-pink;
   letter-spacing: 0.4px;
   padding: 14px 19px 18px 24px;
   display: inline-block;
   margin-top: 30px;
-  margin-bottom: 30px;
-  /*Временно*/
+  margin-bottom: 30px; /*Временно*/
 }
 .browseAllProducts > span {
-  padding-right: 9px;
-  /*Расстояние между надписью и стрелкой*/
+  padding-right: 9px; /*Расстояние между надписью и стрелкой*/
 }
 .fa-long-arrow-alt-right {
   opacity: 0;
@@ -401,10 +407,11 @@ input[type="text"] {
 .feature__banner {
   height: 100%;
   width: 767px;
-  background: url(img/feature__banner-bottom.png) no-repeat, url(img/feature__banner-top.png) no-repeat;
+  background: url(img/feature__banner-bottom.png) no-repeat,
+    url(img/feature__banner-top.png) no-repeat;
 }
 .feature__box-container {
   height: 100%;
-  width: 373px;
+  width: @container-width - @feature__banner-width;
   background-color: #222224;
 }
