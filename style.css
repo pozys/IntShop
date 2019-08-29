@@ -379,8 +379,7 @@ input[type="text"] {
   padding: 14px 19px 18px 24px;
   display: inline-block;
   margin-top: 30px;
-  margin-bottom: 30px;
-  /*Временно*/
+  margin-bottom: 113px;
 }
 .browseAllProducts > span {
   padding-right: 9px;
@@ -401,10 +400,54 @@ input[type="text"] {
 .feature__banner {
   height: 100%;
   width: 767px;
-  background: url(img/feature__banner-bottom.png) no-repeat, url(img/feature__banner-top.png) no-repeat;
+  background: url(img/feature__banner-bottom.png) no-repeat, url(img/feature__banner-top.jpg) no-repeat;
+}
+.feature__banner__offer {
+  padding-left: 39px;
+  padding-top: 146px;
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.feature__banner__offer-head {
+  font-size: 54px;
+  letter-spacing: 1.5px;
+}
+.feature__banner__offer-foot {
+  font-size: 32px;
+  letter-spacing: 0.9px;
+}
+.feature__box {
+  padding-bottom: 54px;
 }
 .feature__box-container {
   height: 100%;
   width: 373px;
   background-color: #222224;
+  box-sizing: border-box;
+  padding-top: 48px;
+}
+.feature__box__image {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 111px;
+}
+.feature__box__text {
+  line-height: 24px;
+  margin-left: 111px;
+  margin-right: 43px;
+}
+.feature__box__text-head {
+  color: #fbfbfb;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.feature__box__text-body {
+  color: #fbfbfb;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.35px;
 }

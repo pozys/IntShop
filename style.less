@@ -3,6 +3,7 @@
 @color-white: #ffffff;
 @container-width: 1140px;
 @feature__banner-width: 767px;
+@feature__box__image-width: 111px;
 
 * {
   margin: 0;
@@ -387,7 +388,7 @@ input[type="text"] {
   padding: 14px 19px 18px 24px;
   display: inline-block;
   margin-top: 30px;
-  margin-bottom: 30px; /*Временно*/
+  margin-bottom: 113px; 
 }
 .browseAllProducts > span {
   padding-right: 9px; /*Расстояние между надписью и стрелкой*/
@@ -408,10 +409,54 @@ input[type="text"] {
   height: 100%;
   width: 767px;
   background: url(img/feature__banner-bottom.png) no-repeat,
-    url(img/feature__banner-top.png) no-repeat;
+    url(img/feature__banner-top.jpg) no-repeat;
+}
+.feature__banner__offer {
+  padding-left: 39px;
+  padding-top: 146px;
+  color: @color-white;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.feature__banner__offer-head {
+  font-size: 54px;
+  letter-spacing: 1.5px;
+}
+.feature__banner__offer-foot {
+  font-size: 32px;
+  letter-spacing: 0.9px;
+}
+.feature__box {
+  padding-bottom: 54px;
 }
 .feature__box-container {
   height: 100%;
   width: @container-width - @feature__banner-width;
   background-color: #222224;
+  box-sizing: border-box;
+  padding-top: 48px;
+}
+.feature__box__image {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: @feature__box__image-width;
+}
+.feature__box__text {
+  line-height: 24px;
+  margin-left: @feature__box__image-width;
+  margin-right: 43px;
+}
+.feature__box__text-head {
+  color: #fbfbfb;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.feature__box__text-body {
+  color: #fbfbfb;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.35px;
 }
