@@ -1,9 +1,12 @@
 @color-pink: #f16d7f;
 @greyBorderColor: #e6e6e6;
 @color-white: #ffffff;
+@page-width: 1600px;
 @container-width: 1140px;
 @feature__banner-width: 767px;
 @feature__box__image-width: 111px;
+@feedback__img-width: 83px;
+@email-group-height: 46px;
 
 * {
   margin: 0;
@@ -17,7 +20,7 @@ ul {
 }
 body {
   font-family: "Lato", sans-serif;
-  width: 1600px;
+  width: @page-width;
   margin: 0 auto;
 }
 .header {
@@ -45,7 +48,9 @@ body {
 .category,
 .featuredItems__item-hover,
 .featuredItems__add-to-cart,
-.feature {
+.feature,
+.email-group,
+.subscribe__right {
   display: flex;
   align-items: center;
 }
@@ -162,7 +167,8 @@ input[type="text"] {
   margin-left: 5px;
 }
 .header__myAccount:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+  box-shadow: 0 0 5px @color-pink;
+  /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);*/
 }
 .menu {
   height: 51px;
@@ -388,7 +394,7 @@ input[type="text"] {
   padding: 14px 19px 18px 24px;
   display: inline-block;
   margin-top: 30px;
-  margin-bottom: 113px; 
+  margin-bottom: 113px;
 }
 .browseAllProducts > span {
   padding-right: 9px; /*Расстояние между надписью и стрелкой*/
@@ -404,6 +410,7 @@ input[type="text"] {
 }
 .feature {
   height: 529px;
+  margin-bottom: 97px;
 }
 .feature__banner {
   height: 100%;
@@ -436,11 +443,14 @@ input[type="text"] {
   box-sizing: border-box;
   padding-top: 48px;
 }
-.feature__box__image {
+.figureImage_position {
   float: left;
   display: flex;
   justify-content: center;
   align-items: flex-start;
+}
+.feature__box__image {
+  .figureImage_position;
   width: @feature__box__image-width;
 }
 .feature__box__text {
@@ -459,4 +469,130 @@ input[type="text"] {
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 0.35px;
+}
+.subscribe {
+  margin-bottom: 109px;
+  height: 438px;
+  display: flex;
+  background: url(img/Rectangle_background.png) no-repeat,
+    url(img/subscribe-background.jpg) no-repeat;
+}
+
+.subscribe__left,
+.subscribe__right {
+  width: @page-width / 2;
+}
+.subscribe__left {
+  border-right: @color-white solid 1px;
+}
+.subscribe__right {
+  box-sizing: border-box;
+  border-left: @color-white solid 1px;
+  padding-right: 322px;
+  justify-content: flex-end;
+}
+.feedback {
+  margin-top: 111px;
+  margin-left: 230px;
+}
+.feedback__text-group {
+  margin-right: 72px;
+  margin-left: @feedback__img-width + 28px;
+}
+.feedback__text-group__text {
+  font-weight: bold;
+  color: #222224;
+  font-size: 16px;
+  font-style: italic;
+  letter-spacing: -0.3px;
+  line-height: 26px;
+  margin-bottom: 19px;
+}
+.feedback__text-group__name-group__name1 {
+  color: @color-pink;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  font-weight: 800;
+  line-height: 19px;
+}
+.feedback__text-group__name-group__name2 {
+  color: #222224;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  font-weight: 400;
+  margin-bottom: 22px;
+}
+.feedback__img {
+  .figureImage_position;
+  width: @feedback__img-width;
+}
+.feedback__text-group__nav__link {
+  display: inline-block;
+  background-color: #d6d6d6;
+  height: 4px;
+  width: 38px;
+  margin-right: 13px;
+}
+.feedback__text-group__nav__link-active {
+  background-color: @color-pink;
+}
+.feedback__text-group__nav__link:hover {
+  background-color: @color-pink;
+}
+
+.subscribe-section {
+  text-align: center;
+}
+.subscribe-section__title {
+  color: #222224;
+  font-weight: 600;
+  line-height: 50px;
+  font-size: 24px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+.subscribe-section__subtitle {
+  color: #222224;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.35px;
+  margin-bottom: 35px;
+}
+.email-group {
+  width: 386px;
+  margin-bottom: 37px;
+  height: @email-group-height;
+}
+.email-subscribe {
+  height: 100%;
+  width: 282px;
+  border-style: none;
+  border-radius: 23px 0 0 23px;
+  background-color: #e1e1e1;
+  padding: 0 30px;
+  opacity: 0.67;
+  color: #222224;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.35px;
+}
+.email-subscribe:focus{
+  outline: none;
+}
+.subscribe-button {
+  height: 100%;
+  width: 104px;
+  border-radius: 0 23px 23px 0;
+  background-color: @color-pink;
+  color: @color-white;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.35px;
+  line-height: @email-group-height;
+  text-align: center;
+}
+.subscribe-button:hover{
+  box-shadow: 0 0 8px @color-pink;
 }
