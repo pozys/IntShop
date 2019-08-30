@@ -462,7 +462,7 @@ input[type="text"] {
   letter-spacing: 0.35px;
 }
 .subscribe {
-  margin-bottom: 109px;
+  margin-bottom: 123px;
   height: 438px;
   display: flex;
   background: url(img/Rectangle_background.png) no-repeat, url(img/subscribe-background.jpg) no-repeat;
@@ -586,4 +586,43 @@ input[type="text"] {
 }
 .subscribe-button:hover {
   box-shadow: 0 0 8px #f16d7f;
+}
+.footer-top {
+  padding-bottom: 89px;
+  display: flex;
+  justify-content: space-between;
+}
+.about {
+  width: 427px;
+  margin-top: -8px;
+  /*margin-right: 64px;*/
+}
+.footer-text {
+  margin-top: 29px;
+  color: #898989;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.35px;
+  line-height: 24px;
+}
+.footer-text > p:not(:last-child) {
+  margin-bottom: 20px;
+}
+.footer__nav__item > li {
+  list-style: none;
+  color: #898989;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+}
+.footer__nav__item > li:not(:last-child) {
+  margin-bottom: 25px;
+}
+.footer__nav__item > li:first-child {
+  margin-bottom: 40px;
+  color: #f16d7f;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.45px;
 }
