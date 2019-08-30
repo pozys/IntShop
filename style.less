@@ -7,6 +7,7 @@
 @feature__box__image-width: 111px;
 @feedback__img-width: 83px;
 @email-group-height: 46px;
+@socialIcons__Item-dimensions: 32px;
 
 * {
   margin: 0;
@@ -22,6 +23,7 @@ body {
   font-family: "Lato", sans-serif;
   width: @page-width;
   margin: 0 auto;
+  min-height: 100%;
 }
 .header {
   border: 1px solid #ececec;
@@ -50,7 +52,9 @@ body {
 .featuredItems__add-to-cart,
 .feature,
 .email-group,
-.subscribe__right {
+.subscribe__right,
+.copyright-container,
+.copyright__socialIcons {
   display: flex;
   align-items: center;
 }
@@ -59,7 +63,8 @@ body {
 .header__right-side,
 .search,
 .search__window,
-.category {
+.category,
+.copyright-container {
   justify-content: space-between;
 }
 .header__myAccount,
@@ -191,6 +196,7 @@ input[type="text"] {
 .menu__link:active {
   color: @color-white;
   background-color: #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
 }
 .slider {
   height: 562px;
@@ -317,6 +323,9 @@ input[type="text"] {
   box-sizing: border-box;
 }
 .featuredItems__add-to-cart {
+  width: 119px;
+  background: transparent;
+  box-sizing: border-box;
   margin: 0 70px;
   height: 39px;
   color: @color-white;
@@ -326,6 +335,9 @@ input[type="text"] {
 }
 .featuredItems__add-to-cart:hover {
   box-shadow: 0 0 10px @color-white;
+}
+.featuredItems__add-to-cart:focus {
+  outline: none;
 }
 .featuredItems__add-to-cart > .cart {
   margin-right: 8px;
@@ -406,7 +418,7 @@ input[type="text"] {
   opacity: 100;
 }
 .browseAllProducts:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+  box-shadow: 0 0 10px @color-pink;
 }
 .feature {
   height: 529px;
@@ -539,6 +551,9 @@ input[type="text"] {
 .feedback__text-group__nav__link:hover {
   background-color: @color-pink;
 }
+.feedback__text-group__nav__link:active {
+  box-shadow: 0 0 10px @color-pink;
+}
 
 .subscribe-section {
   text-align: center;
@@ -579,6 +594,7 @@ input[type="text"] {
   letter-spacing: 0.35px;
 }
 .email-subscribe:focus {
+  background: @color-white;
   outline: none;
 }
 .subscribe-button {
@@ -604,7 +620,6 @@ input[type="text"] {
 .about {
   width: 427px;
   margin-top: -8px; // Данный блок чуть выше соседнего
-  /*margin-right: 64px;*/
 }
 .footer-text {
   margin-top: 29px;
@@ -617,21 +632,76 @@ input[type="text"] {
 .footer-text > p:not(:last-child) {
   margin-bottom: 20px;
 }
-.footer__nav__item > li{
-  list-style: none;
+
+.footer__nav__item__link {
   color: #898989;
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 0.4px;
+  display: inline-block;
+  box-sizing: border-box;
 }
-.footer__nav__item > li:not(:last-child) {
+.footer__nav__item > li:not(:last-child) .footer__nav__item__link {
   margin-bottom: 25px;
 }
-.footer__nav__item > li:first-child {
+.footer__nav__item > li:first-child .footer__nav__item__link {
   margin-bottom: 40px;
   color: @color-pink;
   font-size: 18px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.45px;
+  border-bottom: transparent 2px solid;
+}
+.footer__nav__item > li:not(:first-child) .footer__nav__item__link {
+  border-bottom: transparent 2px solid;
+}
+.footer__nav__item > li:first-child .footer__nav__item__link:hover {
+  border-bottom: @color-pink 2px solid;
+}
+.footer__nav__item > li:first-child .footer__nav__item__link:active {
+  text-shadow: 0 0 8px @color-pink;
+}
+.footer__nav__item > li:not(:first-child) .footer__nav__item__link:hover {
+  border-bottom: #898989 2px solid;
+}
+.footer__nav__item > li:not(:first-child) .footer__nav__item__link:active {
+  text-shadow: 0 0 8px #898989;
+}
+
+.copyright {
+  height: 80px;
+  background-color: #e6e6e6;
+}
+.copyright-container {
+  height: 100%;
+}
+.copyright__text {
+  color: #7a7a7a;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+.socialIcons__Item {
+  height: @socialIcons__Item-dimensions;
+  width: @socialIcons__Item-dimensions;
+  color: #b2b2b2;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  background: @color-white;
+  line-height: @socialIcons__Item-dimensions;
+  text-align: center;
+}
+.socialIcons__Item:not(:last-child) {
+  margin-right: 8px;
+}
+.socialIcons__Item:hover {
+  background: @color-pink;
+  color: @color-white;
+}
+.socialIcons__Item:active {
+  background: @color-white;
+  color: #b2b2b2;
+  opacity: 0.5;
 }
