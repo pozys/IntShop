@@ -10,7 +10,7 @@ ul {
 }
 body {
   font-family: "Lato", sans-serif;
-  width: 1600px;
+  width: 1200px;
   margin: 0 auto;
   min-height: 100%;
 }
@@ -480,7 +480,7 @@ input[type="text"] {
 }
 .subscribe__left,
 .subscribe__right {
-  width: 800px;
+  width: 600px;
 }
 .subscribe__left {
   border-right: #ffffff solid 1px;
