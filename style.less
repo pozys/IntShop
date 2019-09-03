@@ -119,6 +119,7 @@ body {
 .search {
   height: 38px;
   margin-left: 37px;
+  position: relative;
 }
 
 .search > .search__browse-button:hover {
@@ -228,7 +229,7 @@ input[type="text"] {
   padding: 15px 20px;
   border-radius: 5px;
   background-color: #ffffff;
-
+  text-align: left;
   display: none;
   position: absolute;
   top: 43px;
@@ -239,7 +240,8 @@ input[type="text"] {
 .menu__item:nth-last-child(3) .drop {
   right: 0;
 }
-.menu__item:hover .drop {
+.menu__item:hover .drop,
+.search > .search__browse-button:active .drop {
   display: flex;
 }
 .drop__column:not(:last-child) {
@@ -299,7 +301,7 @@ input[type="text"] {
 .drop__super-sale:hover {
   .box-shadow-grey-10;
 }
-.drop:before {
+.drop-before {
   content: "";
   position: absolute;
   width: 10px;
@@ -309,7 +311,18 @@ input[type="text"] {
   border-top: @greyBorderColor 1px solid;
   transform: rotate(45deg);
   top: -6px;
+}
+.drop:before {
+  .drop-before;
   left: 59px;
+}
+.search__browse-button > .drop {
+  .drop;
+  top: 36px;
+}
+.search__browse-button > .drop:before {
+  .drop-before;
+  left: 63px;
 }
 .menu__item:last-child .drop:before,
 .menu__item:nth-last-child(2) .drop:before,
@@ -870,6 +883,10 @@ input[type="text"] {
   height: 777px;
   background-color: #f7f7f7;
 }
+.imageSlide__img {
+  margin-top: 11px;
+  align-self: flex-start;
+}
 .arrow {
   height: 47px;
   width: 47px;
@@ -881,11 +898,7 @@ input[type="text"] {
 .arrow:hover {
   background-color: #2a2a2a;
 }
-/*option:before{
-content: "";
-height: 12px;
-width: 12px;
-}*/
+
 .colorSquare {
   display: block;
   height: 12px;

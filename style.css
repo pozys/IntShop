@@ -105,6 +105,7 @@ body {
 .search {
   height: 38px;
   margin-left: 37px;
+  position: relative;
 }
 .search > .search__browse-button:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
@@ -215,6 +216,7 @@ input[type="text"] {
   padding: 15px 20px;
   border-radius: 5px;
   background-color: #ffffff;
+  text-align: left;
   display: none;
   position: absolute;
   top: 43px;
@@ -225,7 +227,8 @@ input[type="text"] {
 .menu__item:nth-last-child(3) .drop {
   right: 0;
 }
-.menu__item:hover .drop {
+.menu__item:hover .drop,
+.search > .search__browse-button:active .drop {
   display: flex;
 }
 .drop__column:not(:last-child) {
@@ -281,6 +284,17 @@ input[type="text"] {
 .drop__super-sale:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
 }
+.drop-before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-left: #e6e6e6 1px solid;
+  border-top: #e6e6e6 1px solid;
+  transform: rotate(45deg);
+  top: -6px;
+}
 .drop:before {
   content: "";
   position: absolute;
@@ -292,6 +306,30 @@ input[type="text"] {
   transform: rotate(45deg);
   top: -6px;
   left: 59px;
+}
+.search__browse-button > .drop {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+  padding: 15px 20px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  text-align: left;
+  display: none;
+  position: absolute;
+  top: 43px;
+  z-index: 1;
+  top: 36px;
+}
+.search__browse-button > .drop:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border-left: #e6e6e6 1px solid;
+  border-top: #e6e6e6 1px solid;
+  transform: rotate(45deg);
+  top: -6px;
+  left: 63px;
 }
 .menu__item:last-child .drop:before,
 .menu__item:nth-last-child(2) .drop:before,
@@ -853,6 +891,10 @@ input[type="text"] {
   height: 777px;
   background-color: #f7f7f7;
 }
+.imageSlide__img {
+  margin-top: 11px;
+  align-self: flex-start;
+}
 .arrow {
   height: 47px;
   width: 47px;
@@ -864,11 +906,6 @@ input[type="text"] {
 .arrow:hover {
   background-color: #2a2a2a;
 }
-/*option:before{
-content: "";
-height: 12px;
-width: 12px;
-}*/
 .colorSquare {
   display: block;
   height: 12px;
