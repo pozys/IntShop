@@ -1,3 +1,5 @@
+@import "vars";
+@import "mixins";
 * {
   margin: 0;
   padding: 0;
@@ -168,6 +170,16 @@ body {
 input[type="text"] {
   padding: 0 10px;
 }
+.header__cart:active {
+  @extend %dropDisplayFlex;
+}
+
+.header__cart > .drop:before {
+  @include drop-before(13px);
+}
+.header__cart > .drop {
+  @include drop-decoration(85px);
+}
 .header__myAccount {
   width: 130px;
   height: 38px;
@@ -177,6 +189,10 @@ input[type="text"] {
   font-weight: 400;
   letter-spacing: 0.38px;
   margin-left: 45px;
+
+  &:hover {
+    box-shadow: 0 0 5px $highlightColor;
+  }
 }
 .header__myAccount .fa-caret-down {
   color: $backColor;
@@ -184,9 +200,7 @@ input[type="text"] {
   letter-spacing: 0.35px;
   margin-left: 5px;
 }
-.header__myAccount:hover {
-  box-shadow: 0 0 5px $highlightColor;
-}
+
 .menu {
   height: 51px;
 }
@@ -212,24 +226,20 @@ input[type="text"] {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
 }
 .drop {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
-  padding: 15px 20px;
-  border-radius: 5px;
-  background-color: $backColor;
-  text-align: left;
-  display: none;
-  position: absolute;
-  top: 43px;
-  z-index: 1;
+  @include drop-decoration(43px);
 }
 .menu__item:last-child .drop,
 .menu__item:nth-last-child(2) .drop,
 .menu__item:nth-last-child(3) .drop {
   right: 0;
 }
-.menu__item:hover .drop,
-.search > .search__browse-button:active .drop {
-  display: flex;
+
+.menu__item:hover {
+  @extend %dropDisplayFlex;
+}
+
+.search > .search__browse-button:active {
+  @extend %dropDisplayFlex;
 }
 .drop__column:not(:last-child) {
   margin-right: 29px;
@@ -296,40 +306,13 @@ input[type="text"] {
   top: -6px;
 }
 .drop:before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: $backColor;
-  border-left: $greyBorderColor 1px solid;
-  border-top: $greyBorderColor 1px solid;
-  transform: rotate(45deg);
-  top: -6px;
-  left: 59px;
+  @include drop-before(59px);
 }
 .search__browse-button > .drop {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
-  padding: 15px 20px;
-  border-radius: 5px;
-  background-color: $backColor;
-  text-align: left;
-  display: none;
-  position: absolute;
-  top: 43px;
-  z-index: 1;
-  top: 36px;
+  @include drop-decoration(36px);
 }
 .search__browse-button > .drop:before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: $backColor;
-  border-left: $greyBorderColor 1px solid;
-  border-top: $greyBorderColor 1px solid;
-  transform: rotate(45deg);
-  top: -6px;
-  left: 63px;
+  @include drop-before(63px);
 }
 .menu__item:last-child .drop:before,
 .menu__item:nth-last-child(2) .drop:before,
@@ -965,7 +948,6 @@ input[type="text"] {
   margin-bottom: 14px;
 }
 
-
 .productDescription__h3 {
   color: #4d4d4d;
   font-size: 18px;
@@ -1103,4 +1085,91 @@ input[type="text"] {
 }
 .YouMayAlsoLike__name:hover {
   color: $highlightColor;
+}
+.productsTable {
+  $td-padding: 20px;
+  margin-top: 90px - $td-padding;
+  margin-bottom: 44px;
+  & td {
+    border-bottom: 1px solid #eaeaea;
+    padding: $td-padding 0;
+  }
+
+  &__header {
+    color: #222222;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.2px;
+
+    & > td:not(:first-child) {
+      text-align: center;
+    }
+  }
+  &__productDetails {
+    display: flex;
+  }
+}
+
+.productsTable__row {
+  color: #656565;
+  font-size: 13px;
+  font-weight: 600;
+
+  & > td:not(:first-child) {
+    text-align: center;
+  }
+}
+.productDetails {
+  &__img {
+    height: 115px;
+    width: 100px;
+  
+  }
+  &__name {
+    display: inline-block;
+    color: #222222;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 38px;
+    &:hover{
+      color: $highlightColor;
+    }
+  }
+  &__description {
+    margin-left: 21px;
+  }
+  &__feature__name {
+    font-size: 13px;
+    display: inline-block;
+    margin-right: 10px;
+    color: #575757;
+    font-weight: 600;
+  }
+  &__feature__value {
+    color: #6f6e6e;
+    font-size: 13px;
+    font-weight: 300;
+  }
+}
+td > input[type="number"] {
+  height: 30px;
+  width: 54px;
+  border: 1px solid #eaeaea;
+  text-align: center;
+}
+.delete-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #c0c0c0;
+  font-size: 9px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $backColor;
+  width: 15px;
+  height: 15px;
+  border-radius: 50% 50%;
+  margin: 0 auto;
 }

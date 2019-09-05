@@ -1,0 +1,28 @@
+%dropDisplayFlex .drop {
+  display: flex;
+}
+
+@mixin drop-before($left) {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: $backColor;
+  border-left: $greyBorderColor 1px solid;
+  border-top: $greyBorderColor 1px solid;
+  transform: rotate(45deg);
+  top: -6px;
+  left: $left;
+}
+
+@mixin drop-decoration($top){
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+  padding: 15px 20px;
+  border-radius: 5px;
+  background-color: $backColor;
+  text-align: left;
+  display: none;
+  position: absolute;
+  top: $top;
+  z-index: 1;
+}
