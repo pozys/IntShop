@@ -15,7 +15,7 @@ body {
   width: $page-width;
   margin: 0 auto;
   min-height: 100%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+  @include box-shadow-grey(10px);
 }
 .header {
   border: 1px solid #ececec;
@@ -104,7 +104,6 @@ body {
 }
 .pink {
   color: $highlightColor;
-  font-weight: 600;
 }
 .search {
   height: 38px;
@@ -172,7 +171,7 @@ body {
 input[type="text"] {
   padding: 0 10px;
 }
-.header__cart:active {
+.header__cart:hover {
   @extend %dropDisplayFlex;
 }
 
@@ -193,7 +192,7 @@ input[type="text"] {
   margin-left: 45px;
 
   &:hover {
-    box-shadow: 0 0 5px $highlightColor;
+    @include box-shadow-pink(5px);
   }
 }
 .header__myAccount .fa-caret-down {
@@ -225,7 +224,7 @@ input[type="text"] {
 .menu__link:active {
   color: $backColor;
   background-color: #ccc;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+  @include box-shadow-grey(10px);
 }
 .drop {
   @include drop-decoration(43px);
@@ -234,6 +233,9 @@ input[type="text"] {
 .menu__item:nth-last-child(2) .drop,
 .menu__item:nth-last-child(3) .drop {
   right: 0;
+}
+.drop__goToCart{
+  @include ShoppingCartbutton(19px, 72px);
 }
 
 .menu__item:hover {
@@ -294,7 +296,7 @@ input[type="text"] {
   padding: 0 10px 7px 0;
 }
 .drop__super-sale:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+  @include box-shadow-grey(10px);
 }
 .drop-before {
   content: "";
@@ -544,7 +546,7 @@ input[type="text"] {
   opacity: 100;
 }
 .browseAllProducts:hover {
-  box-shadow: 0 0 10px $highlightColor;
+  @include box-shadow-pink(10px);
 }
 .feature {
   height: 529px;
@@ -689,7 +691,7 @@ input[type="text"] {
   background-color: $highlightColor;
 }
 .feedback__text-group__nav__link:active {
-  box-shadow: 0 0 10px $highlightColor;
+  @include box-shadow-pink(10px);
 }
 .subscribe-section {
   text-align: center;
@@ -746,7 +748,7 @@ input[type="text"] {
   text-align: center;
 }
 .subscribe-button:hover {
-  box-shadow: 0 0 8px $highlightColor;
+  @include box-shadow-pink(8px);
 }
 .subscribe-button:active {
   background-color: #922436;
@@ -919,7 +921,7 @@ input[type="text"] {
     border: 1px solid #eaeaea;
 
     &:active {
-      box-shadow: 0 0 5px $highlightColor;
+      @include box-shadow-pink(5px);
     }
 
     &:hover:not(.productDescription__link-active) {
@@ -995,7 +997,7 @@ input[type="text"] {
   font-weight: 700;
 }
 .choose-group__button:hover {
-  box-shadow: 0 0 5px $highlightColor;
+  @include box-shadow-pink(5px);
 }
 .choose-group__button:focus {
   outline: none;
@@ -1010,18 +1012,18 @@ input[type="text"] {
 .productDescription__info {
   margin-bottom: 35px;
 }
-select,
-input {
-  width: 100%;
-  height: 35px;
-  margin-top: 15px;
-  box-sizing: border-box;
+%input-color {
   color: #bcbcbc;
   font-size: 13px;
   font-weight: 400;
-  padding: 0 15px;
-  border: 1px solid #eaeaea;
-  background-color: $backColor;
+}
+.choose__item select,
+.choose__item input {
+  @include input-decoration(35px, 15px);
+  @extend %input-color;
+  &::placeholder {
+    @extend %input-color;
+  }
 }
 .productDescription__price {
   width: 100%;
@@ -1091,7 +1093,7 @@ input {
 .productsTable {
   margin-bottom: 44px;
   $td-padding: 20px;
-  margin-top: 90px - $td-padding;  
+  margin-top: 90px - $td-padding;
   & td {
     border-bottom: 1px solid #eaeaea;
     padding: $td-padding 0;
@@ -1126,6 +1128,9 @@ input {
   &__img {
     height: 115px;
     width: 100px;
+    &:hover {
+      @include box-shadow-grey(6px);
+    }
   }
   &__name {
     display: inline-block;
@@ -1174,18 +1179,127 @@ td > input[type="number"] {
   border-radius: 50% 50%;
   margin: 0 auto;
 }
-.products-cart{
+.products-cart {
   margin-bottom: 62px;
 }
 .buttonShoppingCart {
-  padding: 19px 38px;
+  @include ShoppingCartbutton(19px, 38px);
+ /* padding: 19px 38px;
   border: 1px solid #eaeaea;
   background-color: $backColor;
   color: #4a4a4a;
   font-size: 14px;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: uppercase;*/
+  &:hover {
+    @include box-shadow-grey(10px);
+  }
 }
-.orderPlacement__item{
-  width: 355px;
+%orderPlacement__button {
+  border: 1px solid #eaeaea;
+  background-color: $backColor;
+  color: #4a4a4a;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 24px;
+}
+%orderPlacement__total-span {
+  display: inline-block;
+  margin-right: 15px;
+}
+.orderPlacement {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 79px;
+  &__item {
+    width: 355px;
+    & input,
+    & select {
+      @include input-decoration(45px, 20px);
+      @extend %input-color;
+      &::placeholder {
+        @extend %input-color;
+      }
+    }
+  }
+
+  &__h3 {
+    color: #222222;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  &__getAQuote {
+    @extend %orderPlacement__button;
+    @include orderPlacement__button-dimensions(102px);
+    &:hover {
+      @include box-shadow-grey(5px);
+    }
+  }
+
+  &__applyCoupon {
+    @extend %orderPlacement__button;
+    @include orderPlacement__button-dimensions(119px);
+    &:hover {
+      @extend .orderPlacement__getAQuote:hover;
+    }
+  }
+
+  &__section > p {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 28px;
+  }
+  &__total-group {
+    background-color: #f5f3f3;
+    padding: 42px;
+    text-align: right;
+  }
+  &__subtotal {
+    color: #4a4a4a;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+
+    & > span:first-child {
+      @extend %orderPlacement__total-span;
+    }
+  }
+  &__total {
+    color: #222222;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding-bottom: 22px;
+    margin-bottom: 17px;
+    border-bottom: 1px solid #e2e2e2;
+
+    & > span:first-child {
+      @extend %orderPlacement__total-span;
+    }
+  }
+
+  &__total-button {
+    background-color: $highlightColor;
+    color: $backColor;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 19px 42px;
+    border-style: none;
+    &:hover {
+      @include box-shadow-pink(10px);
+    }
+    &:focus {
+      outline: none;
+    }
+  }
 }

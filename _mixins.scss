@@ -15,8 +15,8 @@
   left: $left;
 }
 
-@mixin drop-decoration($top){
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+@mixin drop-decoration($top) {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
   padding: 15px 20px;
   border-radius: 5px;
   background-color: $backColor;
@@ -25,4 +25,33 @@
   position: absolute;
   top: $top;
   z-index: 1;
+}
+@mixin orderPlacement__button-dimensions($width) {
+  width: $width;
+  padding: 12px ($width * 0.13);
+}
+@mixin input-decoration($height, $margin-top) {
+  width: 100%;
+  height: $height;
+  margin-top: $margin-top;
+  box-sizing: border-box;
+  padding: 0 15px;
+  border: 1px solid #eaeaea;
+  background-color: $backColor;
+  text-transform: capitalize;
+}
+@mixin box-shadow-grey($around){
+  box-shadow: 0 0 $around rgba(0, 0, 0, 0.17);
+}
+@mixin box-shadow-pink($around){
+  box-shadow: 0 0 $around $highlightColor;
+}
+@mixin  ShoppingCartbutton($padding1, $padding2) {
+  padding: $padding1 $padding2;
+  border: 1px solid #eaeaea;
+  background-color: $backColor;
+  color: #4a4a4a;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
 }

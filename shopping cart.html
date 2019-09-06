@@ -520,9 +520,9 @@
         <button class="buttonShoppingCart">cONTINUE sHOPPING</button>
       </div>
     </div>
-    <form action="#" class="orderPlacement">
+    <form action="#" class="orderPlacement container">
       <section class="orderPlacement__section">
-        <h3 class="orderPlacement-h3">Shipping Adress</h3>
+        <h3 class="orderPlacement__h3">Shipping Adress</h3>
         <div class="orderPlacement__item">
           <select name="country">
             <option value="bangladesh">Bangladesh</option>
@@ -537,25 +537,27 @@
           <input type="text" placeholder="Postcode / Zip" />
         </div>
 
-        <a href="#" class="orderPlacement__button">get a quote</a>
+        <a href="#" class="orderPlacement__getAQuote">get a quote</a>
       </section>
       <section class="orderPlacement__section">
-        <h3 class="orderPlacement-h3">coupon discount</h3>
+        <h3 class="orderPlacement__h3">coupon discount</h3>
         <p>Enter your coupon code if you have one</p>
         <div class="orderPlacement__item">
           <input type="text" placeholder="Coupon" />
         </div>
 
-        <a href="#" class="orderPlacement__button">Apply coupon</a>
+        <a href="#" class="orderPlacement__applyCoupon">Apply coupon</a>
       </section>
       <div class="orderPlacement__total-group">
         <div class="orderPlacement__subtotal">
           <span>Sub total</span><span>&#36;900</span>
         </div>
         <div class="orderPlacement__total">
-          <span>GRAND TOTAL</span><span>&#36;900</span>
+          <span>GRAND TOTAL</span><span class="pink">&#36;900</span>
         </div>
-        <button class="orderPlacement__total">proceed to checkout</button>
+        <button class="orderPlacement__total-button">
+          proceed to checkout
+        </button>
       </div>
     </form>
     <section class="subscribe">
