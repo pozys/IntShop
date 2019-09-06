@@ -395,113 +395,220 @@
         </nav>
       </div>
     </div>
-    <table class="productsTable container">
-      <thead>
-        <tr class="productsTable__header">
-          <td>Product Details</td>
-          <td>unite Price</td>
-          <td>Quantity</td>
-          <td>shipping</td>
-          <td>Subtotal</td>
-          <td>ACTION</td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="productsTable__row">
-          <td class="productsTable__productDetails">
-            <a href="#"
-              ><img
-                src="img/product-details1.jpg"
-                alt="product-details1"
-                class="productDetails__img"
-            /></a>
-            <div class="productDetails__description">
-              <a href="#" class="productDetails__name">Mango People T-shirt</a>
-
-              <div class="productDetails__feature">
-                <span
-                  ><span class="productDetails__feature__name">Color:</span
-                  ><span class="productDetails__feature__value">Red</span></span
+    <div class="products-cart container">
+      <table class="productsTable container">
+        <thead>
+          <tr class="productsTable__header">
+            <td>Product Details</td>
+            <td>unite Price</td>
+            <td>Quantity</td>
+            <td>shipping</td>
+            <td>Subtotal</td>
+            <td>ACTION</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="productsTable__row">
+            <td class="productsTable__productDetails">
+              <a href="#"
+                ><img
+                  src="img/product-details1.jpg"
+                  alt="product-details1"
+                  class="productDetails__img"
+              /></a>
+              <div class="productDetails__description">
+                <a href="#" class="productDetails__name"
+                  >Mango People T-shirt</a
                 >
+
+                <div class="productDetails__feature">
+                  <span
+                    ><span class="productDetails__feature__name">Color:</span
+                    ><span class="productDetails__feature__value"
+                      >Red</span
+                    ></span
+                  >
+                </div>
+                <div class="productDetails__feature">
+                  <span class="productDetails__feature__name">Size:</span
+                  ><span class="productDetails__feature__value">Xll</span>
+                </div>
               </div>
-              <div class="productDetails__feature">
-                <span class="productDetails__feature__name">Size:</span
-                ><span class="productDetails__feature__value">Xll</span>
+            </td>
+            <td>&#36;150</td>
+            <td><input type="number" name="productCount" min="1" /></td>
+            <td>FREE</td>
+            <td>&#36;300</td>
+            <td>
+              <a href="#" class="delete-button"><i class="fas fa-times"></i></a>
+            </td>
+          </tr>
+          <tr class="productsTable__row">
+            <td class="productsTable__productDetails">
+              <a href="#"
+                ><img
+                  src="img/product-details2.jpg"
+                  alt="product-details1"
+                  class="productDetails__img"
+              /></a>
+              <div class="productDetails__description">
+                <a href="#" class="productDetails__name"
+                  >Mango People T-shirt</a
+                >
+
+                <div class="productDetails__feature">
+                  <span
+                    ><span class="productDetails__feature__name">Color:</span
+                    ><span class="productDetails__feature__value"
+                      >Red</span
+                    ></span
+                  >
+                </div>
+                <div class="productDetails__feature">
+                  <span class="productDetails__feature__name">Size:</span
+                  ><span class="productDetails__feature__value">Xll</span>
+                </div>
               </div>
+            </td>
+            <td>&#36;150</td>
+            <td><input type="number" name="productCount" min="1" /></td>
+            <td>FREE</td>
+            <td>&#36;300</td>
+            <td>
+              <a href="#" class="delete-button"><i class="fas fa-times"></i></a>
+            </td>
+          </tr>
+          <tr class="productsTable__row">
+            <td class="productsTable__productDetails">
+              <a href="#"
+                ><img
+                  src="img/product-details3.jpg"
+                  alt="product-details1"
+                  class="productDetails__img"
+              /></a>
+              <div class="productDetails__description">
+                <a href="#" class="productDetails__name"
+                  >Mango People T-shirt</a
+                >
+
+                <div class="productDetails__feature">
+                  <span
+                    ><span class="productDetails__feature__name">Color:</span
+                    ><span class="productDetails__feature__value"
+                      >Red</span
+                    ></span
+                  >
+                </div>
+                <div class="productDetails__feature">
+                  <span class="productDetails__feature__name">Size:</span
+                  ><span class="productDetails__feature__value">Xll</span>
+                </div>
+              </div>
+            </td>
+            <td>&#36;150</td>
+            <td><input type="number" name="productCount" min="1" /></td>
+            <td>FREE</td>
+            <td>&#36;300</td>
+            <td>
+              <a href="#" class="delete-button"><i class="fas fa-times"></i></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="products-cart__button-panel">
+        <button class="buttonShoppingCart">cLEAR SHOPPING CART</button>
+        <button class="buttonShoppingCart">cONTINUE sHOPPING</button>
+      </div>
+    </div>
+    <form action="#" class="orderPlacement">
+      <section class="orderPlacement__section">
+        <h3 class="orderPlacement-h3">Shipping Adress</h3>
+        <div class="orderPlacement__item">
+          <select name="country">
+            <option value="bangladesh">Bangladesh</option>
+            <option value="russia">Russia</option>
+            <option value="france">France</option>
+          </select>
+        </div>
+        <div class="orderPlacement__item">
+          <input type="text" placeholder="State" />
+        </div>
+        <div class="orderPlacement__item">
+          <input type="text" placeholder="Postcode / Zip" />
+        </div>
+
+        <a href="#" class="orderPlacement__button">get a quote</a>
+      </section>
+      <section class="orderPlacement__section">
+        <h3 class="orderPlacement-h3">coupon discount</h3>
+        <p>Enter your coupon code if you have one</p>
+        <div class="orderPlacement__item">
+          <input type="text" placeholder="Coupon" />
+        </div>
+
+        <a href="#" class="orderPlacement__button">Apply coupon</a>
+      </section>
+      <div class="orderPlacement__total-group">
+        <div class="orderPlacement__subtotal">
+          <span>Sub total</span><span>&#36;900</span>
+        </div>
+        <div class="orderPlacement__total">
+          <span>GRAND TOTAL</span><span>&#36;900</span>
+        </div>
+        <button class="orderPlacement__total">proceed to checkout</button>
+      </div>
+    </form>
+    <section class="subscribe">
+      <div class="container">
+        <div class="subscribe__left">
+          <figure class="feedback">
+            <div class="feedback__img">
+              <img src="img/Bin_Burhan.png" alt="Bin_Burhan" />
             </div>
-          </td>
-          <td>&#36;150</td>
-          <td><input type="number" name="productCount" min="1" /></td>
-          <td>FREE</td>
-          <td>&#36;300</td>
-          <td>
-            <a href="#" class="delete-button"><i class="fas fa-times"></i></a>
-          </td>
-        </tr>
-        <tr class="productsTable__row">
-                <td class="productsTable__productDetails">
-                  <a href="#"
-                    ><img
-                      src="img/product-details2.jpg"
-                      alt="product-details1"
-                      class="productDetails__img"
-                  /></a>
-                  <div class="productDetails__description">
-                    <a href="#" class="productDetails__name">Mango People T-shirt</a>
-      
-                    <div class="productDetails__feature">
-                      <span
-                        ><span class="productDetails__feature__name">Color:</span
-                        ><span class="productDetails__feature__value">Red</span></span
-                      >
-                    </div>
-                    <div class="productDetails__feature">
-                      <span class="productDetails__feature__name">Size:</span
-                      ><span class="productDetails__feature__value">Xll</span>
-                    </div>
-                  </div>
-                </td>
-                <td>&#36;150</td>
-                <td><input type="number" name="productCount" min="1" /></td>
-                <td>FREE</td>
-                <td>&#36;300</td>
-                <td>
-                  <a href="#" class="delete-button"><i class="fas fa-times"></i></a>
-                </td>
-              </tr>
-              <tr class="productsTable__row">
-                    <td class="productsTable__productDetails">
-                      <a href="#"
-                        ><img
-                          src="img/product-details3.jpg"
-                          alt="product-details1"
-                          class="productDetails__img"
-                      /></a>
-                      <div class="productDetails__description">
-                        <a href="#" class="productDetails__name">Mango People T-shirt</a>
-          
-                        <div class="productDetails__feature">
-                          <span
-                            ><span class="productDetails__feature__name">Color:</span
-                            ><span class="productDetails__feature__value">Red</span></span
-                          >
-                        </div>
-                        <div class="productDetails__feature">
-                          <span class="productDetails__feature__name">Size:</span
-                          ><span class="productDetails__feature__value">Xll</span>
-                        </div>
-                      </div>
-                    </td>
-                    <td>&#36;150</td>
-                    <td><input type="number" name="productCount" min="1" /></td>
-                    <td>FREE</td>
-                    <td>&#36;300</td>
-                    <td>
-                      <a href="#" class="delete-button"><i class="fas fa-times"></i></a>
-                    </td>
-                  </tr>
-      </tbody>
-    </table>
+            <figcaption class="feedback__text-group">
+              <blockquote class="feedback__text-group__text">
+                &#8220;Vestibulum quis porttitor dui! Quisque viverra nunc mi, a
+                pulvinar purus condimentum a. Aliquam condimentum mattis neque
+                sed pretium&#8221;
+              </blockquote>
+              <div class="feedback__text-group__name-group">
+                <div class="feedback__text-group__name-group__name1">
+                  Bin Burhan
+                </div>
+                <div class="feedback__text-group__name-group__name2">
+                  Dhaka, Bd
+                </div>
+              </div>
+              <nav class="feedback__text-group__nav">
+                <a href="#" class="feedback__text-group__nav__link"></a
+                ><a
+                  href="#"
+                  class="feedback__text-group__nav__link feedback__text-group__nav__link-active"
+                ></a
+                ><a href="#" class="feedback__text-group__nav__link"></a>
+              </nav>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="subscribe__right">
+          <section class="subscribe-section">
+            <div class="subscribe-section__title">Subscribe</div>
+            <div class="subscribe-section__subtitle">
+              FOR OUR NEWLETTER AND PROMOTION
+            </div>
+            <form action="№" class="subscribe-section__form">
+              <div class="email-group">
+                <input
+                  class="email-subscribe"
+                  type="email"
+                  placeholder="Enter Your Email"
+                /><a href="#" class="subscribe-button">Subscribe</a>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </section>
   </body>
   <footer>
     <div class="footer-top container">

@@ -63,7 +63,8 @@ body {
 .imageSlide,
 .arrow,
 .productDescription__links,
-.YouMayAlsoLike__images {
+.YouMayAlsoLike__images,
+.products-cart__button-panel {
   display: flex;
   align-items: center;
 }
@@ -76,7 +77,8 @@ body {
 .copyright-container,
 .breadcrumb-group-container,
 .imageSlide,
-.YouMayAlsoLike__images {
+.YouMayAlsoLike__images,
+.products-cart__button-panel {
   justify-content: space-between;
 }
 .header__myAccount,
@@ -1008,8 +1010,8 @@ input[type="text"] {
 .productDescription__info {
   margin-bottom: 35px;
 }
-.choose__item > select,
-.choose__item > input {
+select,
+input {
   width: 100%;
   height: 35px;
   margin-top: 15px;
@@ -1087,9 +1089,9 @@ input[type="text"] {
   color: $highlightColor;
 }
 .productsTable {
-  $td-padding: 20px;
-  margin-top: 90px - $td-padding;
   margin-bottom: 44px;
+  $td-padding: 20px;
+  margin-top: 90px - $td-padding;  
   & td {
     border-bottom: 1px solid #eaeaea;
     padding: $td-padding 0;
@@ -1124,7 +1126,6 @@ input[type="text"] {
   &__img {
     height: 115px;
     width: 100px;
-  
   }
   &__name {
     display: inline-block;
@@ -1133,7 +1134,7 @@ input[type="text"] {
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 38px;
-    &:hover{
+    &:hover {
       color: $highlightColor;
     }
   }
@@ -1172,4 +1173,19 @@ td > input[type="number"] {
   height: 15px;
   border-radius: 50% 50%;
   margin: 0 auto;
+}
+.products-cart{
+  margin-bottom: 62px;
+}
+.buttonShoppingCart {
+  padding: 19px 38px;
+  border: 1px solid #eaeaea;
+  background-color: $backColor;
+  color: #4a4a4a;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.orderPlacement__item{
+  width: 355px;
 }
