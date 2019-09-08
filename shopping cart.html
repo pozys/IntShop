@@ -43,8 +43,12 @@
                 </div>
               </div>
             </button>
-            <div class="search__window">
-              <input type="text" placeholder="Search for Item..." />
+            <div class="searchWindow">
+              <input
+                class="input input_searchWindow"
+                type="text"
+                placeholder="Search for Item..."
+              />
               <a href="#" class="search__button-search"
                 ><i class="fas fa-search"></i
               ></a>
@@ -52,10 +56,49 @@
           </form>
         </div>
         <div class="header__right-side">
-          <a href="#"><img src="img/cart.svg" alt="cart" class="cart"/></a>
-          <a href="#" class="header__myAccount"
-            ><span>My Account </span><i class="fas fa-caret-down"></i
-          ></a>
+          <div class="header-cart">
+            <a href="shopping cart.html"
+              ><img src="img/cart.svg" alt="cart" class="cart"
+            /></a>
+            <div class="drop">
+              <div class="drop__column">
+                <ul class="drop__ul">
+                  <li>
+                    <div class="drop__cart-item">
+                      <a href="#"
+                        ><img src="" alt="" class="cart-item__image"
+                      /></a>
+                      <div class="cart-item__description">
+                        <div class="cart-item__name"></div>
+                        <div class="cart-item__score"></div>
+                        <div class="cart-item__price"></div>
+                      </div>
+                      <a href="#" class="delete-button"
+                        ><i class="fas fa-times"></i
+                      ></a>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="drop__total">
+                      <div>TOTAL</div>
+                      <div>&#36;500.00</div>
+                    </div>
+                    <button class="drop__checkOut">Checkout</button>
+                    <button
+                      class="greyBorderButton greyBorderButton_forHeader-cart"
+                    >
+                      Go to cart
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="pinkButton header__pinkButton pinkButton_forHeader"
+            ><span>My Account </span><i class="fas fa-caret-down"></i>
+          </a>
         </div>
       </div>
     </header>
@@ -516,37 +559,57 @@
         </tbody>
       </table>
       <div class="products-cart__button-panel">
-        <button class="buttonShoppingCart">cLEAR SHOPPING CART</button>
-        <button class="buttonShoppingCart">cONTINUE sHOPPING</button>
+        <button class="greyBorderButton greyBorderButton_forProducts-cart">
+          cLEAR SHOPPING CART
+        </button>
+        <button class="greyBorderButton greyBorderButton_forProducts-cart">
+          cONTINUE sHOPPING
+        </button>
       </div>
     </div>
     <form action="#" class="orderPlacement container">
       <section class="orderPlacement__section">
         <h3 class="orderPlacement__h3">Shipping Adress</h3>
-        <div class="orderPlacement__item">
-          <select name="country">
-            <option value="bangladesh">Bangladesh</option>
-            <option value="russia">Russia</option>
-            <option value="france">France</option>
-          </select>
-        </div>
-        <div class="orderPlacement__item">
-          <input type="text" placeholder="State" />
-        </div>
-        <div class="orderPlacement__item">
-          <input type="text" placeholder="Postcode / Zip" />
-        </div>
 
-        <a href="#" class="orderPlacement__getAQuote">get a quote</a>
+        <select
+          class="select orderPlacement__select select_forOrderPlacement"
+          name="country"
+        >
+          <option value="bangladesh">Bangladesh</option>
+          <option value="russia">Russia</option>
+          <option value="france">France</option>
+        </select>
+
+        <input
+          class="input orderPlacement__input input_forOrderPlacement"
+          type="text"
+          placeholder="State"
+        />
+
+        <input
+          class="input orderPlacement__input input_forOrderPlacement"
+          type="text"
+          placeholder="Postcode / Zip"
+        />
+
+        <a href="#" class="greyBorderButton greyBorderButton_forGetAQuote"
+          >get a quote</a
+        >
       </section>
       <section class="orderPlacement__section">
         <h3 class="orderPlacement__h3">coupon discount</h3>
         <p>Enter your coupon code if you have one</p>
         <div class="orderPlacement__item">
-          <input type="text" placeholder="Coupon" />
+          <input
+            class="input orderPlacement__input input_forOrderPlacement"
+            type="text"
+            placeholder="Coupon"
+          />
         </div>
 
-        <a href="#" class="orderPlacement__applyCoupon">Apply coupon</a>
+        <a href="#" class="greyBorderButton greyBorderButton_forApplyCoupon"
+          >Apply coupon</a
+        >
       </section>
       <div class="orderPlacement__total-group">
         <div class="orderPlacement__subtotal">
@@ -555,9 +618,9 @@
         <div class="orderPlacement__total">
           <span>GRAND TOTAL</span><span class="pink">&#36;900</span>
         </div>
-        <button class="orderPlacement__total-button">
+        <a href="#" class="pinkButton pinkButton_fororderPlacement">
           proceed to checkout
-        </button>
+        </a>
       </div>
     </form>
     <section class="subscribe">

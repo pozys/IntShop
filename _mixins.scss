@@ -26,7 +26,7 @@
   top: $top;
   z-index: 1;
 }
-@mixin orderPlacement__button-dimensions($width) {
+@mixin greyBorderButton-dimensions($width) {
   width: $width;
   padding: 12px ($width * 0.13);
 }
@@ -46,12 +46,6 @@
 @mixin box-shadow-pink($around){
   box-shadow: 0 0 $around $highlightColor;
 }
-@mixin  ShoppingCartbutton($padding1, $padding2) {
+@mixin greyBorderButton-paddings($padding1, $padding2) {
   padding: $padding1 $padding2;
-  border: 1px solid #eaeaea;
-  background-color: $backColor;
-  color: #4a4a4a;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
 }
