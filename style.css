@@ -142,6 +142,15 @@ body {
   margin-left: 13px;
 }
 
+.cart:hover {
+  -webkit-transition: -webkit-transform 0.1s;
+  transition: -webkit-transform 0.1s;
+  transition: transform 0.1s;
+  transition: transform 0.1s, -webkit-transform 0.1s;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
 .pink {
   color: #f16d7f;
 }
@@ -686,6 +695,10 @@ body {
   display: inline-block;
   font-size: 16px;
   font-weight: 700;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
 }
 
 .pinkButton:hover {
@@ -694,6 +707,8 @@ body {
 }
 
 .pinkButton:hover .fa-long-arrow-alt-right {
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
   opacity: 100;
 }
 
@@ -1628,6 +1643,30 @@ td > input[type="number"] {
   font-size: 14px;
   font-weight: 700;
   padding: 19px 72px;
+}
+
+@-webkit-keyframes anim {
+  50% {
+    background: #922436;
+  }
+  70% {
+    background: #a4a4a4;
+  }
+  100% {
+    background: aquamarine;
+  }
+}
+
+@keyframes anim {
+  50% {
+    background: #922436;
+  }
+  70% {
+    background: #a4a4a4;
+  }
+  100% {
+    background: aquamarine;
+  }
 }
 
 .greyBorderButton_forCheckOut-list {
