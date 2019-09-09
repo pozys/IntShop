@@ -1,5 +1,6 @@
 %dropDisplayFlex .drop {
   display: flex;
+  opacity: 1;
 }
 
 @mixin drop-before($left) {
@@ -21,7 +22,10 @@
   border-radius: 5px;
   background-color: $backColor;
   text-align: left;
+  transition-delay: 1s;
+  transition: opacity 0.8s;
   display: none;
+  opacity: 0;
   position: absolute;
   top: $top;
   z-index: 1;
@@ -40,10 +44,10 @@
   background-color: $backColor;
   text-transform: capitalize;
 }
-@mixin box-shadow-grey($around){
+@mixin box-shadow-grey($around) {
   box-shadow: 0 0 $around rgba(0, 0, 0, 0.17);
 }
-@mixin box-shadow-pink($around){
+@mixin box-shadow-pink($around) {
   box-shadow: 0 0 $around $highlightColor;
 }
 @mixin greyBorderButton-paddings($padding1, $padding2) {

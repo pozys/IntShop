@@ -197,7 +197,7 @@
           </div>
         </li>
         <li class="menu__item">
-          <a href="#" class="menu__link">Women</a>
+          <a href="#" class="menu__link menu__link_active">Women</a>
           <div class="drop">
             <div class="drop__column">
               <h3 class="drop__h3">Women</h3>
@@ -441,83 +441,127 @@
     </div>
 
     <main class="checkOut-list container">
-      <ul class="checkOut-list__ul">
-        <li class="checkOut-list__item">
-          <div class="checkOut-list__column">
-            <h3 class="checkOut-list__h3">
-              Shipping Adress
-            </h3>
-            <p class="checkOut-list__boldLetter">
-              Check as a guest or register
-            </p>
-            <p class="checkOut-list__normalLetter">
-              Register with us for future convenience
-            </p>
-            <div class="radio-box">
-              <p class="radio-box__p">
-                <input
-                  class="input_radio"
-                  type="radio"
-                  name="guestOrRegister"
-                  value="guest"
-                />checkout as guest
+      <ul class="checkOut-list__ol">
+        <li class="checkOut-list__li">
+          <h3 class="checkOut-list__h3">
+            Shipping Adress
+          </h3>
+          <div class="checkOut-list__item">
+            <div class="checkOut-list__column twoColumns">
+              <p class="checkOut-list__boldLetter">
+                Check as a guest or register
               </p>
-
-              <p class="radio-box__p">
-                <input
-                  class="input_radio"
-                  type="radio"
-                  name="guestOrRegister"
-                  value="register"
-                  checked
-                />
-                register
+              <p class="checkOut-list__normalLetter">
+                Register with us for future convenience
               </p>
-            </div>
+              <div class="radio-box">
+                <p class="radio-box__p">
+                  <input
+                    class="input_radio"
+                    type="radio"
+                    name="guestOrRegister"
+                    value="guest"
+                  />checkout as guest
+                </p>
 
-            <p class="checkOut-list__boldLetter">register and save time!</p>
-            <p class="checkOut-list__normalLetter">
-              Register with us for future convenience
-            </p>
-            <ul class="checkOut-list__inner-ul">
-              <li class="checkOut-list__normalLetter">
-                <i class="fas fa-angle-double-right"></i> Fast and easy checkout
-              </li>
-              <li class="checkOut-list__normalLetter">
-                <i class="fas fa-angle-double-right"></i> Easy access to your
-                order history and status
-              </li>
-            </ul>
-            <a
-              href="#"
-              class="greyBorderButton greyBorderButton_forCheckOut-list"
-              >Continue</a
-            >
-          </div>
-          <div class="checkOut-list__column">
-            <p class="checkOut-list__boldLetter">Already registed?</p>
-            <p class="checkOut-list__normalLetter">Please log in below</p>
-           
-            <form action="#" class="form checkOut-list__form">
-                <label for="email" class="label label_required"
-                >EMAIL ADDRESS</label
+                <p class="radio-box__p">
+                  <input
+                    class="input_radio"
+                    type="radio"
+                    name="guestOrRegister"
+                    value="register"
+                    checked
+                  />
+                  register
+                </p>
+              </div>
+
+              <p class="checkOut-list__boldLetter">register and save time!</p>
+              <p class="checkOut-list__normalLetter">
+                Register with us for future convenience
+              </p>
+              <ul class="checkOut-list__inner-ul">
+                <li class="checkOut-list__normalLetter">
+                  <i class="fas fa-angle-double-right"></i> Fast and easy
+                  checkout
+                </li>
+                <li class="checkOut-list__normalLetter">
+                  <i class="fas fa-angle-double-right"></i> Easy access to your
+                  order history and status
+                </li>
+              </ul>
+              <a
+                href="#"
+                class="greyBorderButton greyBorderButton_forCheckOut-list"
+                >Continue</a
               >
-              <input type="email" class="input checkOut-list__input input_forCheckOut-list" name="email" />
+            </div>
+            <div class="checkOut-list__column twoColumns">
+              <p class="checkOut-list__boldLetter">Already registed?</p>
+              <p class="checkOut-list__normalLetter">Please log in below</p>
 
-              <label for="pass" class="label label_required">PASSWORD</label>
-              <input type="password" class="input checkOut-list__input input_forCheckOut-list" name="email-password" />
-            </form>
-            <p class="checkOut-list__normalLetter normalLetter_footnote">
-              Required Fileds
-            </p>
-            <a
-              href="#"
-              class="greyBorderButton greyBorderButton_forCheckOut-list"
-              >Log in</a
-            >
-            <a href="@" class="simpleLink">Forgot Password ?</a>
+              <form action="#" class="form checkOut-list__form">
+                <label for="email" class="label label_required"
+                  >EMAIL ADDRESS</label
+                >
+                <input
+                  type="email"
+                  class="input checkOut-list__input input_forCheckOut-list"
+                  name="email"
+                />
+
+                <label for="pass" class="label label_required">PASSWORD</label>
+                <input
+                  type="password"
+                  class="input checkOut-list__input input_forCheckOut-list"
+                  name="email-password"
+                />
+              </form>
+              <p class="checkOut-list__normalLetter normalLetter_footnote">
+                Required Fileds
+              </p>
+              <a
+                href="#"
+                class="greyBorderButton greyBorderButton_forCheckOut-list"
+                >Log in</a
+              >
+              <a href="@" class="simpleLink checkOut-list__simpleLink"
+                >Forgot Password ?</a
+              >
+            </div>
           </div>
         </li>
+        <hr class="checkOut-list__hr" />
+        <li class="checkOut-list__li">
+          <h3 class="checkOut-list__h3">
+            BILLING INFORMATION
+          </h3>
+        </li>
+        <hr class="checkOut-list__hr" />
+        <li class="checkOut-list__li">
+          <h3 class="checkOut-list__h3">
+            SHIPPING INFORMATION
+          </h3>
+        </li>
+        <hr class="checkOut-list__hr" />
+        <li class="checkOut-list__li">
+          <h3 class="checkOut-list__h3">
+            SHIPPING METHOD
+          </h3>
+        </li>
+        <hr class="checkOut-list__hr" />
+        <li class="checkOut-list__li">
+          <h3 class="checkOut-list__h3">
+            PAYMENT METHOD
+          </h3>
+        </li>
+        <hr class="checkOut-list__hr" />
+        <li class="checkOut-list__li">
+          <h3 class="checkOut-list__h3">
+            ORDER REVIEW
+          </h3>
+        </li>
+        <hr class="checkOut-list__hr" />
       </ul>
     </main>
 

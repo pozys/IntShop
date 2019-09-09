@@ -44,7 +44,11 @@
               </div>
             </button>
             <div class="searchWindow">
-              <input class="input input_searchWindow" type="text" placeholder="Search for Item..." />
+              <input
+                class="input input_searchWindow"
+                type="text"
+                placeholder="Search for Item..."
+              />
               <a href="#" class="search__button-search"
                 ><i class="fas fa-search"></i
               ></a>
@@ -53,31 +57,74 @@
         </div>
         <div class="header__right-side">
           <div class="header-cart">
-            <a href="shopping cart.html"><img src="img/cart.svg" alt="cart" class="cart"/></a>
+            <a href="shopping cart.html"
+              ><img src="img/cart.svg" alt="cart" class="cart"
+            /></a>
             <div class="drop">
               <div class="drop__column">
                 <ul class="drop__ul">
                   <li>
-                    <div class="drop__cart-item">
+                    <div class="cart-item">
                       <a href="#"
-                        ><img src="" alt="" class="cart-item__image"
+                        ><img
+                          src="img/cart-item1.jpg"
+                          alt="cart-item1"
+                          class="cart-item__image"
                       /></a>
                       <div class="cart-item__description">
-                        <div class="cart-item__name"></div>
-                        <div class="cart-item__score"></div>
-                        <div class="cart-item__price"></div>
+                        <div class="cart-item__name">Rebox Zane</div>
+                        <div class="cart-item__score">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i
+                          ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                          ><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="cart-item__price">1 x &#36;250</div>
                       </div>
-                      <a href="#" class="delete-button"><i class="fas fa-times"></i></a>
+                      <a href="#" class="delete-button cart-item__delete-button"
+                        ><i class="fas fa-times"></i
+                      ></a>
+                    </div>
+                  </li>
+
+                  <div class="cart-item">
+                      <a href="#"
+                        ><img
+                          src="img/cart-item2.jpg"
+                          alt="cart-item2"
+                          class="cart-item__image"
+                      /></a>
+                      <div class="cart-item__description">
+                        <div class="cart-item__name">Rebox Zane</div>
+                        <div class="cart-item__score">
+                          <i class="fas fa-star"></i><i class="fas fa-star"></i
+                          ><i class="fas fa-star"></i><i class="fas fa-star"></i
+                          ><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <div class="cart-item__price">1 x &#36;250</div>
+                      </div>
+                      <a href="#" class="delete-button cart-item__delete-button"
+                        ><i class="fas fa-times"></i
+                      ></a>
                     </div>
                   </li>
 
                   <li>
-                    <div class="drop__total">
+                    <div class="cart-item__total">
                       <div>TOTAL</div>
                       <div>&#36;500.00</div>
                     </div>
-                    <button class="drop__checkOut">Checkout</button>
-                    <button class="greyBorderButton greyBorderButton_forHeader-cart">Go to cart</button>
+                    <div class="cart-item__button-box">
+                      <button
+                        class="pink-border-button pink-border-button_for-cart-drop"
+                      >
+                        Checkout
+                      </button>
+                      <button
+                        class="greyBorderButton greyBorderButton_forHeader-cart"
+                      >
+                        Go to cart
+                      </button>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -93,7 +140,7 @@
     <nav>
       <ul class="menu">
         <li class="menu__item">
-          <a href="#" class="menu__link">Home</a>
+          <a href="#" class="menu__link menu__link_active">Home</a>
           <div class="drop">
             <div class="drop__column">
               <h3 class="drop__h3">Women</h3>
@@ -575,7 +622,9 @@
           </div>
         </div>
       </div>
-      <a href="#" class="pinkButton featuredItems__pinkButton pinkButton_browseAll"
+      <a
+        href="#"
+        class="pinkButton featuredItems__pinkButton pinkButton_browseAll"
         ><span>Browse All Product</span
         ><i class="fas fa-long-arrow-alt-right"></i
       ></a>
