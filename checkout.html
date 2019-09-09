@@ -430,16 +430,16 @@
     </nav>
 
     <div class="breadcrumb-group">
-            <div class="breadcrumb-group-container container">
-              <div class="breadcrumb-group__category">New Arrivals</div>
-              <nav class="breadcrumbs">
-                <a href="index.html" class="breadcrumb__link">Home</a>
-                <a href="#" class="breadcrumb__link">Men</a>
-                <a href="#" class="breadcrumb__link">New Arrivals</a>
-              </nav>
-            </div>
-          </div>
-          
+      <div class="breadcrumb-group-container container">
+        <div class="breadcrumb-group__category">New Arrivals</div>
+        <nav class="breadcrumbs">
+          <a href="index.html" class="breadcrumb__link">Home</a>
+          <a href="#" class="breadcrumb__link">Men</a>
+          <a href="#" class="breadcrumb__link">New Arrivals</a>
+        </nav>
+      </div>
+    </div>
+
     <main class="checkOut-list container">
       <ul class="checkOut-list__ul">
         <li class="checkOut-list__item">
@@ -481,10 +481,11 @@
             </p>
             <ul class="checkOut-list__inner-ul">
               <li class="checkOut-list__normalLetter">
-                    <i class="fas fa-angle-double-right"></i> Fast and easy checkout
+                <i class="fas fa-angle-double-right"></i> Fast and easy checkout
               </li>
               <li class="checkOut-list__normalLetter">
-                    <i class="fas fa-angle-double-right"></i> Easy access to your order history and status
+                <i class="fas fa-angle-double-right"></i> Easy access to your
+                order history and status
               </li>
             </ul>
             <a
@@ -493,16 +494,19 @@
               >Continue</a
             >
           </div>
-          <div class="checkOut-list-column">
+          <div class="checkOut-list__column">
             <p class="checkOut-list__boldLetter">Already registed?</p>
             <p class="checkOut-list__normalLetter">Please log in below</p>
-            <label for="email" class="label label_required"
-              >EMAIL ADDRESS</label
-            >
-            <input type="email" class="input" name="email" />
+           
+            <form action="#" class="form checkOut-list__form">
+                <label for="email" class="label label_required"
+                >EMAIL ADDRESS</label
+              >
+              <input type="email" class="input checkOut-list__input input_forCheckOut-list" name="email" />
 
-            <label for="pass" class="label label_required">PASSWORD</label>
-            <input type="password" class="input" name="email-password" />
+              <label for="pass" class="label label_required">PASSWORD</label>
+              <input type="password" class="input checkOut-list__input input_forCheckOut-list" name="email-password" />
+            </form>
             <p class="checkOut-list__normalLetter normalLetter_footnote">
               Required Fileds
             </p>

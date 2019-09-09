@@ -1332,6 +1332,7 @@ body {
 
 .input,
 .select {
+  height: 45px;
   color: #bcbcbc;
   font-size: 13px;
   font-weight: 400;
@@ -1398,6 +1399,11 @@ body {
 .input_radio,
 .select_radio {
   margin-right: 14px;
+}
+
+.input_forCheckOut-list,
+.select_forCheckOut-list {
+  width: 390px;
 }
 
 .productDescription__price {
@@ -1739,6 +1745,12 @@ td > input[type="number"] {
   border-bottom: 1px solid #e2e2e2;
 }
 
+.checkOut-list {
+  /*&__column {
+    width: 50%;
+  }*/
+}
+
 .checkOut-list__h3, .checkOut-list__ul {
   list-style: decimal-leading-zero;
   color: #222222;
@@ -1765,10 +1777,6 @@ td > input[type="number"] {
   text-transform: none;
 }
 
-.checkOut-list__column {
-  width: 50%;
-}
-
 .checkOut-list__inner-ul {
   margin-top: 30px;
 }
@@ -1777,6 +1785,11 @@ td > input[type="number"] {
   color: #b3b2b2;
   font-size: 13px;
   font-weight: 400;
+  line-height: 30px;
+}
+
+.checkOut-list__input {
+  margin-bottom: 20px;
 }
 
 .checkOut-list {
@@ -1795,6 +1808,10 @@ td > input[type="number"] {
   margin-bottom: 10px;
 }
 
+.checkOut-list__form {
+  margin-top: 25px;
+}
+
 .normalLetter_footnote {
   color: #ff0d0d;
   font-size: 13px;
@@ -1807,10 +1824,12 @@ td > input[type="number"] {
 }
 
 .label {
+  display: inline-block;
   color: #222222;
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
+  margin-bottom: 14px;
 }
 
 .label_required::after {
