@@ -164,9 +164,44 @@ body {
   margin-left: 13px;
 }
 
+@-webkit-keyframes cart {
+  30% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  70% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@keyframes cart {
+  30% {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  70% {
+    -webkit-transform: translateX(-5px);
+            transform: translateX(-5px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
 .cart:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  /*transform: scale(1.05);*/
+  -webkit-animation: cart;
+          animation: cart;
+  -webkit-animation-iteration-count: 2;
+          animation-iteration-count: 2;
+  -webkit-animation-duration: 0.2s;
+          animation-duration: 0.2s;
 }
 
 .cart-item {
@@ -196,6 +231,12 @@ body {
   color: #222222;
   font-weight: 700;
   margin-bottom: 10px;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.cart-item__name:hover {
+  color: #f16d7f;
 }
 
 .cart-item__score {
@@ -326,10 +367,8 @@ body {
   border-radius: 5px;
   background-color: #ffffff;
   text-align: left;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
-  -webkit-transition: opacity 0.8s;
-  transition: opacity 0.8s;
+  /*  transition-delay: 1s;
+  transition: opacity 0.8s;*/
   display: none;
   opacity: 0;
   position: absolute;
@@ -383,10 +422,8 @@ body {
   border-radius: 5px;
   background-color: #ffffff;
   text-align: left;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
-  -webkit-transition: opacity 0.8s;
-  transition: opacity 0.8s;
+  /*  transition-delay: 1s;
+  transition: opacity 0.8s;*/
   display: none;
   opacity: 0;
   position: absolute;
@@ -504,10 +541,8 @@ body {
   border-radius: 5px;
   background-color: #ffffff;
   text-align: left;
-  -webkit-transition-delay: 1s;
-          transition-delay: 1s;
-  -webkit-transition: opacity 0.8s;
-  transition: opacity 0.8s;
+  /*  transition-delay: 1s;
+  transition: opacity 0.8s;*/
   display: none;
   opacity: 0;
   position: absolute;
@@ -1292,6 +1327,8 @@ body {
   color: #ffffff;
   font-size: 24px;
   font-weight: 400;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 
 .arrow:hover {
@@ -1412,6 +1449,10 @@ body {
   color: #f16d7f;
   font-size: 16px;
   font-weight: 700;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
 }
 
 .pink-border-button:hover {
@@ -1715,6 +1756,10 @@ td > input[type="number"] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
 }
 
 .greyBorderButton:hover {
