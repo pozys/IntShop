@@ -219,11 +219,7 @@ body {
 .pink {
   color: $highlightColor;
 }
-.search {
-  height: 38px;
-  margin-left: 37px;
-  position: relative;
-}
+
 .search > .search__browse-button:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
 }
@@ -368,6 +364,11 @@ body {
   &__column:not(:first-child) > .drop__ul {
     margin-left: 17px;
   }
+
+  &__stay:hover.drop {
+    display: flex;
+    opacity: 1;
+  }
 }
 .menu__item:last-child .drop,
 .menu__item:nth-last-child(2) .drop,
@@ -417,6 +418,13 @@ body {
 .search__browse-button > .drop:before {
   @include drop-before(63px);
 }
+
+.search {
+  height: 38px;
+  margin-left: 37px;
+  position: relative;
+}
+
 .menu__item:last-child .drop:before,
 .menu__item:nth-last-child(2) .drop:before,
 .menu__item:nth-last-child(3) .drop:before {
@@ -1350,11 +1358,14 @@ body {
 }
 .productDetails {
   &__img {
+    transition-property: transform, box-shadow;
+    transition-duration: $faster-transition-delay;
     height: 115px;
     width: 100px;
 
     &:hover {
       @include box-shadow-grey(6px);
+      transform: scale($stansart-scale);
     }
   }
 
@@ -1365,6 +1376,8 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 38px;
+    transition: color $faster-transition-delay;
+
     &:hover {
       color: $highlightColor;
     }
@@ -1652,5 +1665,5 @@ td > input[type="number"] {
 }
 
 .twoColumns {
-  width: $oneHundredPersent / 2;
+  width: $oneHundredPercent / 2;
 }
