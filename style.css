@@ -363,6 +363,17 @@ body {
           box-sizing: border-box;
 }
 
+.header-cart__drop:before {
+  /*Невидимый блок, чтобы при наведении на корзину блок появлялся, и при снятии наведения фиксировался*/
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 14px;
+  background-color: transparent;
+  top: -14px;
+  left: 0;
+}
+
 .header-cart > .drop:before {
   content: "";
   position: absolute;
