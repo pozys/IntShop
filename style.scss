@@ -83,7 +83,7 @@ body {
 .menu__link,
 .slider__back,
 .category,
-.featuredItems__item-hover,
+.featuredItems__link-hover,
 .featuredItems__add-to-cart,
 .feature,
 .email-group,
@@ -116,7 +116,7 @@ body {
 .search__button-search,
 .menu,
 .subscribe__right,
-.featuredItems__item-hover,
+.featuredItems__link-hover,
 .featuredItems__add-to-cart,
 .arrow,
 .productDescription__links {
@@ -220,20 +220,7 @@ body {
   color: $highlightColor;
 }
 
-.search > .search__browse-button:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
-}
-.search > .search__browse-button:active {
-  background-image: linear-gradient(to bottom, #c0c0c0 0%, #a5a5a5 100%);
-  color: $backColor;
-}
-.search > .search__browse-button:active .fa-caret-down {
-  color: $backColor;
-}
-.search > .search__browse-button:focus {
-  outline: none;
-}
-.search > .search__browse-button {
+.search__browse-button {
   font-family: inherit;
   /*Шрифт перебивался другими стилями для класса button*/
   width: 87px;
@@ -242,6 +229,24 @@ body {
   border: 1px solid $greyBorderColor;
   background-color: #cdcdcc;
   background-image: linear-gradient(to bottom, #f9f9f9 0%, #f5f5f5 100%);
+  transition: all  $faster-transition-delay;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
+  }
+
+  &:active {
+    background-image: linear-gradient(to bottom, #c0c0c0 0%, #a5a5a5 100%);
+    color: $backColor;
+  }
+
+  &:active .fa-caret-down {
+    color: $backColor;
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 .search__browse-button .fa-caret-down {
   color: #838383;
@@ -267,13 +272,13 @@ body {
   box-sizing: border-box;
 }
 
-.header-cart{
-
+.header-cart {
   &:hover {
     @extend %dropDisplayFlex;
   }
 
-  &__drop:before{ /*Невидимый блок, чтобы при наведении на корзину блок появлялся, и при снятии наведения фиксировался*/
+  &__drop:before {
+    /*Невидимый блок, чтобы при наведении на корзину блок появлялся, и при снятии наведения фиксировался*/
     content: "";
     position: absolute;
     width: 100%;
@@ -389,7 +394,7 @@ body {
   right: 0;
 }
 
-.search > .search__browse-button:active {
+.search__browse-button-group:active {
   @extend %dropDisplayFlex;
 }
 
@@ -425,10 +430,10 @@ body {
   top: -6px;
 }
 
-.search__browse-button > .drop {
+.search__browse-button-group > .drop {
   @include drop-decoration(36px);
 }
-.search__browse-button > .drop:before {
+.search__browse-button-group > .drop:before {
   @include drop-before(63px);
 }
 
@@ -569,7 +574,7 @@ body {
   }
 
   &__item,
-  &__item-hover {
+  &__link-hover {
     height: 281px;
     background-repeat: no-repeat;
     background-size: auto 100%;
@@ -577,9 +582,9 @@ body {
     display: block;
   }
 
-  &__item-hover {
+  &__link-hover {
     background-color: #3a3838;
-    display: none;
+    
     opacity: 0.8;
     padding-top: 98px;
     box-sizing: border-box;
@@ -595,6 +600,8 @@ body {
     font-weight: 700;
     border: 1px solid $backColor;
     transition: box-shadow $faster-transition-delay;
+    position: absolute;
+    top: 99px;
 
     &:hover {
       box-shadow: 0 0 10px $backColor;
@@ -614,9 +621,14 @@ body {
       transform: scale($stansart-scale);
     }
   }
+
+  &__block-hover{
+    position: relative;
+    display: none;
+  }
 }
 
-.featuredItems__image-block:hover .featuredItems__item-hover {
+.featuredItems__image-block:hover .featuredItems__block-hover{
   display: block;
 }
 
