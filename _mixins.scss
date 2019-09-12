@@ -3,6 +3,10 @@
   opacity: 1;
 }
 
+@mixin grey-link-hover($width){
+  border-bottom: $width solid $greyBorderColor;
+}
+
 @mixin drop-before($left) {
   content: "";
   position: absolute;

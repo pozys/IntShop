@@ -971,8 +971,8 @@ body {
 }
 
 .feature__banner__offer {
-  padding-left: 39px;
-  padding-top: 1 46px;
+  margin-left: 39px;
+  margin-top: 146px;
   color: #ffffff;
   font-weight: 700;
   text-transform: uppercase;
@@ -988,17 +988,20 @@ body {
   letter-spacing: 0.9px;
 }
 
-.feature__box {
+.feature-box {
   padding-bottom: 54px;
 }
 
-.feature__box-container {
+.feature-box-container {
   height: 100%;
-  width: 373px;
   background-color: #222224;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding-top: 48px;
+}
+
+.feature-box-container_for-index {
+  width: 373px;
 }
 
 .figureImage_position {
@@ -1014,7 +1017,7 @@ body {
           align-items: flex-start;
 }
 
-.feature__box__image {
+.feature-box__image {
   float: left;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1028,20 +1031,20 @@ body {
   width: 111px;
 }
 
-.feature__box__text {
+.feature-box__text {
   line-height: 24px;
   margin-left: 111px;
   margin-right: 43px;
 }
 
-.feature__box__text-head {
+.feature-box__text-head {
   color: #fbfbfb;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
 
-.feature__box__text-body {
+.feature-box__text-body {
   color: #fbfbfb;
   font-size: 14px;
   font-weight: 300;
@@ -2101,5 +2104,160 @@ td > input[type="number"] {
 
 .twoColumns {
   width: 50%;
+}
+
+.product-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 59px;
+}
+
+.left-menu {
+  font-size: 14px;
+  width: 243px;
+  margin-bottom: 18px;
+}
+
+.left-menu:hover .left-menu__item:not(:first-child) {
+  display: block;
+}
+
+.left-menu:hover .left-menu__link_first {
+  color: #ef5b70;
+}
+
+.left-menu__link {
+  display: inline-block;
+  color: #6f6e6e;
+  font-weight: 500;
+}
+
+.left-menu__link:hover {
+  text-decoration: underline;
+}
+
+.left-menu__link_first {
+  color: #6f6e6e;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.left-menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 17px;
+  margin-top: 13px;
+}
+
+.left-menu__item:first-child {
+  padding-left: 12px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ebebeb;
+  border-left: 5px solid #ef5b70;
+}
+
+.left-menu__item:not(:first-child) {
+  display: none;
+}
+
+.left-menu__item:hover .left-menu__fa-caret-up.fa-caret-up {
+  display: block;
+}
+
+.left-menu__item:hover .left-menu__fa-caret-down.fa-caret-down {
+  display: none;
+}
+
+.left-menu__fa-caret-down.fa-caret-down {
+  color: #6f6e6e;
+  text-transform: uppercase;
+}
+
+.left-menu__fa-caret-up.fa-caret-up {
+  color: #ef5b70;
+  text-transform: uppercase;
+  display: none;
+}
+
+.product-box {
+  margin-left: 49px;
+  width: 100%;
+}
+
+.product-box__top-filter {
+  color: #6f6e6e;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.top-filter__item {
+  width: 33.33333%;
+}
+
+.top-filter__h3 {
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 23px;
+}
+
+.top-filter__size {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.top-filter__filter-group {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.trending-now {
+  font-weight: 400;
+  color: #dfdfdf;
+}
+
+.trending-now__filters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.trending-now__filter-item:not(:last-child) {
+  border-right: 2px solid #dfdfdf;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+
+.size__filter-item {
+  margin-right: 9px;
+}
+
+.size__filter-item:not(:first-child) {
+  margin-left: 23px;
+}
+
+.product__feature-box-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */
