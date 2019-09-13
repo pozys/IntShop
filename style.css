@@ -1560,6 +1560,7 @@ body {
   text-transform: capitalize;
   padding: 0 10px;
   display: block;
+  font-family: "Lato", sans-serif;
 }
 
 .input::-webkit-input-placeholder,
@@ -2199,6 +2200,15 @@ td > input[type="number"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 40px;
+}
+
+.product-box__sort-by-box {
+  height: 50px;
+  background-color: #f3f3f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .top-filter__item {
@@ -2259,5 +2269,49 @@ td > input[type="number"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.price__start-end {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.price__range {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.sort-by-box__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 10px;
+}
+
+.sort-by-box__name, .sort-by-box__select {
+  height: 30px;
+  color: #6f6e6e;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid #ebebeb;
+  background-color: #ffffff;
+  display: inline-block;
+  line-height: 30px;
+  padding-left: 12px;
+  padding-right: 8px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+.sort-by-box__name {
+  border-right: none;
 }
 /*# sourceMappingURL=style.css.map */

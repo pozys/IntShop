@@ -688,15 +688,30 @@
           <section class="top-filter__item top-filter__price">
             <h3 class="top-filter__h3">pRICE</h3>
             <form class="price__filter-item">
-              <input type="range" name="filter-price" id="" />
-            </form>
+              <input class="price__range" type="range" name="filter-price" min="52" max="400"/>
+            </form>  
             <div class="price__start-end">
-              <br />
+            
               <span>&#36;52</span><span>&#36;400</span>
             </div>
           </section>
         </div>
-        <div class="product-box__sort-by-box"></div>
+        <div class="product-box__sort-by-box">
+          <div class="sort-by-box__item">
+            <span class="sort-by-box__name">Sort By</span><select name="sortBy"class="select sort-by-box__select">
+              <option value="name">Name</option>
+              <option value="price">price</option>
+              <option value="default">default</option>
+            </select>
+          </div>
+          <div class="sort-by-box__item">
+            <span class="sort-by-box__name">Show</span><select name="show"class="select sort-by-box__select">
+              <option value="9">09</option>
+              <option value="19">19</option>
+              <option value="50">50</option>
+            </select>
+          </div>
+        </div>
         <div class="featuredItems__products">
           <div class="featuredItems__image-block">
             <div class="featuredItems__item featuredItems__item1">

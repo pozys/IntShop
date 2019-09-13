@@ -1233,6 +1233,7 @@ body {
   text-transform: capitalize;
   padding: 0 10px;
   display: block;
+  font-family: $font-family;
 
   &::placeholder {
     color: #bcbcbc;
@@ -1776,13 +1777,19 @@ td > input[type="number"] {
 }
 
 .product-box {
-
   margin-left: 49px;
   width: 100%;
 
   &__top-filter {
     color: #6f6e6e;
     font-size: 14px;
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  &__sort-by-box {
+    height: 50px;
+    background-color: #f3f3f3;
     display: flex;
   }
 }
@@ -1840,5 +1847,46 @@ td > input[type="number"] {
 .product {
   &__feature-box-container {
     display: flex;
+  }
+}
+
+.price {
+  &__start-end {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__range {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+.sort-by-box {
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+
+  &__name,
+  &__select {
+    $height: 30px;
+    height: $height;
+    color: #6f6e6e;
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid #ebebeb;
+    background-color: $backColor;
+    display: inline-block;
+    line-height: $height;
+    padding-left: 12px;
+    padding-right: 8px;
+    box-sizing: border-box;
+    text-transform: capitalize;
+  }
+
+  &__name{
+    border-right: none;
   }
 }
