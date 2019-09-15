@@ -53,6 +53,8 @@ body {
   transition: transform 1s, -webkit-transform 1s;
   -webkit-transform: rotate(-1turn);
           transform: rotate(-1turn);
+  -webkit-transform-origin: 64% 60%;
+          transform-origin: 64% 60%;
 }
 
 .delete-button {
@@ -1329,13 +1331,15 @@ body {
 }
 
 .socialIcons__Item:hover {
-  opacity: 0.5;
-}
-
-.socialIcons__Item:active {
   background: #f16d7f;
   color: #ffffff;
   opacity: 1;
+}
+
+.socialIcons__Item:active {
+  opacity: 0.5;
+  background: #ffffff;
+  color: #b2b2b2;
 }
 
 .breadcrumb-group {
@@ -1983,7 +1987,8 @@ td > input[type="number"] {
 }
 
 .checkOut-list {
-  margin-top: 87px;
+  margin-top: 57px;
+  /* На ширину псевдоэлемента*/
 }
 
 .checkOut-list__h3, .checkOut-list__ol {
@@ -1999,7 +2004,30 @@ td > input[type="number"] {
 }
 
 .checkOut-list__li {
-  margin-left: 34px;
+  margin-left: 28px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.checkOut-list__li:after {
+  content: "";
+  width: calc(100% + 34px);
+  height: 1px;
+  background: #e8e8e8;
+  display: block;
+  position: absolute;
+  left: -26px;
+}
+
+.checkOut-list__li:before {
+  /*Отталкиваемся от линии, созданной псевдоэлементом after вышестоящего блока*/
+  content: "";
+  height: 30px;
+  display: block;
+}
+
+.checkOut-list__li:last-child {
+  margin-bottom: 93px;
 }
 
 .checkOut-list__boldLetter {
@@ -2047,21 +2075,11 @@ td > input[type="number"] {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 80px;
+  margin-top: 35px;
 }
 
 .checkOut-list__form {
   margin-top: 25px;
-}
-
-.checkOut-list__hr {
-  background: #e8e8e8;
-  height: 2px;
-  margin-bottom: 30px;
-  border-style: none;
-}
-
-.checkOut-list__hr:last-child {
-  margin-bottom: 93px;
 }
 
 .normalLetter_footnote {
@@ -2336,10 +2354,18 @@ td > input[type="number"] {
           flex-direction: column;
 }
 
+.trending-now__filter-item:hover {
+  color: #f16d7f;
+}
+
 .trending-now__filter-item:not(:last-child) {
   border-right: 2px solid #dfdfdf;
   padding-right: 10px;
   margin-right: 10px;
+}
+
+a.trending-now__filter-item {
+  color: inherit;
 }
 
 .size__filters {
@@ -2349,8 +2375,36 @@ td > input[type="number"] {
 }
 
 .size__filter-item {
-  margin-right: 9px;
+  position: relative;
+}
+
+.size__filter-input {
+  display: none;
+}
+
+.size__filter-input:checked + .size__label:before {
+  background: #2e2e2e;
+  border-style: inset;
+}
+
+.size__label {
+  margin-left: 22px;
   margin-bottom: 10px;
+  display: inline-block;
+}
+
+.size__label:before {
+  content: "";
+  display: inline-block;
+  height: 11px;
+  width: 11px;
+  border: 1px solid #ebebeb;
+  background-color: #ffffff;
+  position: absolute;
+  left: 0;
+  top: 2px;
+  -webkit-box-shadow: 0 0 1px 2px #ffffff inset;
+          box-shadow: 0 0 1px 2px #ffffff inset;
 }
 
 .product__feature-box-container {

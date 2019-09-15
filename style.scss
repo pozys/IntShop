@@ -37,6 +37,7 @@ body {
   &:hover {
     transition: transform 1s;
     transform: rotate(-1turn);
+    transform-origin: 64% 60%;
   }
 }
 
@@ -219,7 +220,7 @@ body {
 .pink {
   color: $highlightColor;
 
-  &_bold{
+  &_bold {
     font-weight: 600;
   }
 }
@@ -789,7 +790,6 @@ body {
   height: 100%;
   background-color: #222224;
   box-sizing: border-box;
-  
 
   &_for-index {
     width: 373px;
@@ -1041,13 +1041,15 @@ body {
   }
 
   &:hover {
-    opacity: 0.5;
-  }
-
-  &:active {
     background: $highlightColor;
     color: $backColor;
     opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.5;
+    background: $backColor;
+    color: #b2b2b2;
   }
 }
 
@@ -1586,7 +1588,7 @@ td > input[type="number"] {
 }
 
 .checkOut-list {
-  margin-top: 87px;
+  margin-top: 87px - $margin-for-checkOut-list__hr; /* На ширину псевдоэлемента*/
   &__h3,
   &__ol {
     list-style: decimal-leading-zero;
@@ -1601,7 +1603,32 @@ td > input[type="number"] {
   }
 
   &__li {
-    margin-left: 34px;
+    $margin-left: 26px;
+    $addittion-margin: 2px;
+    margin-left: $margin-left + $addittion-margin;
+    margin-bottom: $margin-for-checkOut-list__hr;
+    position: relative;
+
+    &:after {
+      content: "";
+      width: calc(100% + 34px);
+      height: 1px;
+      background: #e8e8e8;
+      display: block;
+      position: absolute;
+      left: -$margin-left;
+    }
+
+    &:before {
+      /*Отталкиваемся от линии, созданной псевдоэлементом after вышестоящего блока*/
+      content: "";
+      height: $margin-for-checkOut-list__hr;
+      display: block;
+    }
+
+    &:last-child {
+      margin-bottom: 93px;
+    }
   }
 
   &__boldLetter {
@@ -1645,20 +1672,11 @@ td > input[type="number"] {
     display: flex;
     justify-content: space-between;
     margin-bottom: 80px;
+    margin-top: 35px;
   }
 
   &__form {
     margin-top: 25px;
-  }
-
-  &__hr {
-    background: #e8e8e8;
-    height: 2px;
-    margin-bottom: $margin-for-checkOut-list__hr;
-    border-style: none;
-    &:last-child {
-      margin-bottom: 93px;
-    }
   }
 }
 
@@ -1909,12 +1927,22 @@ td > input[type="number"] {
     flex-direction: column;
   }
 
-  &__filter-item:not(:last-child) {
-    $empty-space: 10px;
-    border-right: 2px solid #dfdfdf;
-    padding-right: $empty-space;
-    margin-right: $empty-space;
+  &__filter-item {
+    &:hover {
+      color: $highlightColor;
+    }
+
+    &:not(:last-child) {
+      $empty-space: 10px;
+      border-right: 2px solid #dfdfdf;
+      padding-right: $empty-space;
+      margin-right: $empty-space;
+    }
   }
+}
+
+a.trending-now__filter-item {
+  color: inherit;
 }
 
 .size {
@@ -1923,8 +1951,35 @@ td > input[type="number"] {
   }
 
   &__filter-item {
-    margin-right: 9px;
+    position: relative;
+  }
+
+  &__filter-input {
+    display: none;
+
+    &:checked + .size__label:before {
+      background: #2e2e2e;
+      border-style: inset;
+    }
+  }
+
+  &__label {
+    margin-left: 22px;
     margin-bottom: 10px;
+    display: inline-block;
+
+    &:before {
+      content: "";
+      display: inline-block;
+      height: 11px;
+      width: 11px;
+      border: 1px solid #ebebeb;
+      background-color: #ffffff;
+      position: absolute;
+      left: 0;
+      top: 2px;
+      box-shadow: 0 0 1px 2px $backColor inset;
+    }
   }
 }
 
@@ -2008,35 +2063,31 @@ td > input[type="number"] {
 
 .product-feature-box__image {
   float: none;
-
 }
 
 .product-feature-box__text {
   margin: 0;
   line-height: 24px;
-
- 
 }
 
-.product__feature-box{
+.product__feature-box {
   padding-bottom: 0;
   text-align: center;
-  width:$oneHundredPercent / 3;
+  width: $oneHundredPercent / 3;
 
-  &:first-of-type > .product-feature-box__text{
+  &:first-of-type > .product-feature-box__text {
     margin-top: 32px;
   }
 
-  &:nth-of-type(2) > .product-feature-box__text{
+  &:nth-of-type(2) > .product-feature-box__text {
     margin-top: 23px;
   }
 
-  &:nth-of-type(3) > .product-feature-box__text{
+  &:nth-of-type(3) > .product-feature-box__text {
     margin-top: 29px;
   }
 }
 
-.product__feature-box-text-head{
+.product__feature-box-text-head {
   margin-bottom: 15px;
- 
 }
