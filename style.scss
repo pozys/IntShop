@@ -10,12 +10,19 @@ a {
 ul {
   list-style: none;
 }
+
 body {
+  display: flex;
+  flex-direction: column;
   font-family: $font-family;
   width: $page-width;
   margin: 0 auto;
-  min-height: 100%;
+  min-height: 100vh;
   @include box-shadow-grey(10px);
+}
+
+.wraper {
+  flex-grow: 1;
 }
 .header {
   border: 1px solid #ececec;
