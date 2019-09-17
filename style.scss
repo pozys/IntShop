@@ -934,7 +934,6 @@ body {
   margin-bottom: 35px;
 }
 .email-group {
-  width: 386px;
   margin-bottom: 37px;
   height: $email-group-height;
 }
@@ -950,6 +949,7 @@ body {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.35px;
+  box-sizing: border-box;
 }
 .email-subscribe:focus {
   background: $backColor;
@@ -1595,6 +1595,9 @@ td > input[type="number"] {
 }
 
 .checkOut-list {
+  $margin-left: 26px;
+  $addittion-margin: 2px;
+
   margin-top: 87px - $margin-for-checkOut-list__hr; /* На ширину псевдоэлемента*/
   &__h3,
   &__ol {
@@ -1610,12 +1613,23 @@ td > input[type="number"] {
   }
 
   &__li {
-    $margin-left: 26px;
-    $addittion-margin: 2px;
     margin-left: $margin-left + $addittion-margin;
     margin-bottom: $margin-for-checkOut-list__hr;
     position: relative;
 
+    &:after{
+      content: "";
+      height: 1px;
+      background: $backColor;
+      display: block;
+    }
+
+    &:last-child {
+      margin-bottom: 93px;
+    }
+  }
+
+  &__after {
     &:after {
       content: "";
       width: calc(100% + 34px);
@@ -1624,17 +1638,6 @@ td > input[type="number"] {
       display: block;
       position: absolute;
       left: -$margin-left;
-    }
-
-    &:before {
-      /*Отталкиваемся от линии, созданной псевдоэлементом after вышестоящего блока*/
-      content: "";
-      height: $margin-for-checkOut-list__hr;
-      display: block;
-    }
-
-    &:last-child {
-      margin-bottom: 93px;
     }
   }
 

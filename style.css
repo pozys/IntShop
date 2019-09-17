@@ -1206,7 +1206,6 @@ body {
 }
 
 .email-group {
-  width: 386px;
   margin-bottom: 37px;
   height: 46px;
 }
@@ -1223,6 +1222,8 @@ body {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.35px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .email-subscribe:focus {
@@ -2024,23 +2025,23 @@ td > input[type="number"] {
 
 .checkOut-list__li:after {
   content: "";
+  height: 1px;
+  background: #ffffff;
+  display: block;
+}
+
+.checkOut-list__li:last-child {
+  margin-bottom: 93px;
+}
+
+.checkOut-list__after:after {
+  content: "";
   width: calc(100% + 34px);
   height: 1px;
   background: #e8e8e8;
   display: block;
   position: absolute;
   left: -26px;
-}
-
-.checkOut-list__li:before {
-  /*Отталкиваемся от линии, созданной псевдоэлементом after вышестоящего блока*/
-  content: "";
-  height: 30px;
-  display: block;
-}
-
-.checkOut-list__li:last-child {
-  margin-bottom: 93px;
 }
 
 .checkOut-list__boldLetter {

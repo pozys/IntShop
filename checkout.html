@@ -623,134 +623,148 @@
     </div>
 
     <main class="checkOut-list container">
-      <ul class="checkOut-list__ol">
+      <ol class="checkOut-list__ol">
         <li class="checkOut-list__li">
-          <h3 class="checkOut-list__h3">
-            Shipping Adress
-          </h3>
-          <div class="checkOut-list__item">
-            <div class="checkOut-list__column twoColumns">
-              <p class="checkOut-list__boldLetter">
-                Check as a guest or register
-              </p>
-              <p class="checkOut-list__normalLetter">
-                Register with us for future convenience
-              </p>
-              <div class="radio-box">
-                <p class="radio-box__p">
-                  <input
-                    class="input_radio"
-                    type="radio"
-                    name="guestOrRegister"
-                    value="guest"
-                    id="radio-box-guest"
-                  />
-                  <label for="radio-box-guest">checkout as guest</label>
+          <div class="checkOut-list__after">
+            <h3 class="checkOut-list__h3">
+              Shipping Adress
+            </h3>
+            <div class="checkOut-list__item">
+              <div class="checkOut-list__column twoColumns">
+                <p class="checkOut-list__boldLetter">
+                  Check as a guest or register
                 </p>
+                <p class="checkOut-list__normalLetter">
+                  Register with us for future convenience
+                </p>
+                <div class="radio-box">
+                  <p class="radio-box__p">
+                    <input
+                      class="input_radio"
+                      type="radio"
+                      name="guestOrRegister"
+                      value="guest"
+                      id="radio-box-guest"
+                    />
+                    <label for="radio-box-guest">checkout as guest</label>
+                  </p>
 
-                <p class="radio-box__p">
-                  <input
-                    class="input_radio"
-                    type="radio"
-                    name="guestOrRegister"
-                    value="register"
-                    id="radio-box-register"
-                    checked
-                  />
-                  <label for="radio-box-register">register</label>
+                  <p class="radio-box__p">
+                    <input
+                      class="input_radio"
+                      type="radio"
+                      name="guestOrRegister"
+                      value="register"
+                      id="radio-box-register"
+                      checked
+                    />
+                    <label for="radio-box-register">register</label>
+                  </p>
+                </div>
+
+                <p class="checkOut-list__boldLetter">register and save time!</p>
+                <p class="checkOut-list__normalLetter">
+                  Register with us for future convenience
                 </p>
+                <ul class="checkOut-list__inner-ul">
+                  <li class="checkOut-list__normalLetter">
+                    <i class="fas fa-angle-double-right"></i> Fast and easy
+                    checkout
+                  </li>
+                  <li class="checkOut-list__normalLetter">
+                    <i class="fas fa-angle-double-right"></i> Easy access to
+                    your order history and status
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  class="greyBorderButton greyBorderButton_forCheckOut-list"
+                  >Continue</a
+                >
               </div>
+              <div class="checkOut-list__column twoColumns">
+                <p class="checkOut-list__boldLetter">Already registed?</p>
+                <p class="checkOut-list__normalLetter">Please log in below</p>
 
-              <p class="checkOut-list__boldLetter">register and save time!</p>
-              <p class="checkOut-list__normalLetter">
-                Register with us for future convenience
-              </p>
-              <ul class="checkOut-list__inner-ul">
-                <li class="checkOut-list__normalLetter">
-                  <i class="fas fa-angle-double-right"></i> Fast and easy
-                  checkout
-                </li>
-                <li class="checkOut-list__normalLetter">
-                  <i class="fas fa-angle-double-right"></i> Easy access to your
-                  order history and status
-                </li>
-              </ul>
-              <a
-                href="#"
-                class="greyBorderButton greyBorderButton_forCheckOut-list"
-                >Continue</a
-              >
-            </div>
-            <div class="checkOut-list__column twoColumns">
-              <p class="checkOut-list__boldLetter">Already registed?</p>
-              <p class="checkOut-list__normalLetter">Please log in below</p>
+                <form action="#" class="form checkOut-list__form">
+                  <label for="checkOut-list-email" class="label label_required"
+                    >EMAIL ADDRESS</label
+                  >
+                  <input
+                    type="email"
+                    class="input checkOut-list__input input_forCheckOut-list"
+                    name="email"
+                    id="checkOut-list-email"
+                  />
 
-              <form action="#" class="form checkOut-list__form">
-                <label for="checkOut-list-email" class="label label_required"
-                  >EMAIL ADDRESS</label
+                  <label
+                    for="checkOut-list-password"
+                    class="label label_required"
+                    >PASSWORD</label
+                  >
+                  <input
+                    type="password"
+                    class="input checkOut-list__input input_forCheckOut-list"
+                    name="email-password"
+                    id="checkOut-list-password"
+                  />
+                </form>
+                <p class="checkOut-list__normalLetter normalLetter_footnote">
+                  Required Fileds
+                </p>
+                <a
+                  href="#"
+                  class="greyBorderButton greyBorderButton_forCheckOut-list"
+                  >Log in</a
                 >
-                <input
-                  type="email"
-                  class="input checkOut-list__input input_forCheckOut-list"
-                  name="email"
-                  id="checkOut-list-email"
-                />
-
-                <label for="checkOut-list-password" class="label label_required"
-                  >PASSWORD</label
+                <a href="@" class="simpleLink checkOut-list__simpleLink"
+                  >Forgot Password ?</a
                 >
-                <input
-                  type="password"
-                  class="input checkOut-list__input input_forCheckOut-list"
-                  name="email-password"
-                  id="checkOut-list-password"
-                />
-              </form>
-              <p class="checkOut-list__normalLetter normalLetter_footnote">
-                Required Fileds
-              </p>
-              <a
-                href="#"
-                class="greyBorderButton greyBorderButton_forCheckOut-list"
-                >Log in</a
-              >
-              <a href="@" class="simpleLink checkOut-list__simpleLink"
-                >Forgot Password ?</a
-              >
+              </div>
             </div>
           </div>
         </li>
 
         <li class="checkOut-list__li">
-          <h3 class="checkOut-list__h3">
-            BILLING INFORMATION
-          </h3>
+          <div class="checkOut-list__after">
+            <h3 class="checkOut-list__h3">
+              BILLING INFORMATION
+            </h3>
+          </div>
         </li>
 
         <li class="checkOut-list__li">
-          <h3 class="checkOut-list__h3">
-            SHIPPING INFORMATION
-          </h3>
+          <div class="checkOut-list__after">
+            <h3 class="checkOut-list__h3">
+              SHIPPING INFORMATION
+            </h3>
+          </div>
         </li>
 
         <li class="checkOut-list__li">
-          <h3 class="checkOut-list__h3">
-            SHIPPING METHOD
-          </h3>
+          <div class="checkOut-list__after">
+            <h3 class="checkOut-list__h3">
+              SHIPPING METHOD
+            </h3>
+          </div>
         </li>
 
         <li class="checkOut-list__li">
-          <h3 class="checkOut-list__h3">
-            PAYMENT METHOD
-          </h3>
+          <div class="checkOut-list__after">
+            <h3 class="checkOut-list__h3">
+              PAYMENT METHOD
+            </h3>
+          </div>
         </li>
 
         <li class="checkOut-list__li">
-          <h3 class="checkOut-list__h3">
-            ORDER REVIEW
-          </h3>
+          <div class="checkOut-list__after">
+            <h3 class="checkOut-list__h3">
+              ORDER REVIEW
+            </h3>
+          </div>
         </li>
-      </ul>
+      </ol>
     </main>
 
     <div class="subscribe">
@@ -816,19 +830,19 @@
             </div></a
           >
           <div class="footer-text">
-              <p>
-                Objectively transition extensive data rather than cross functional
-                solutions. Monotonectally syndicate multidisciplinary materials
-                before go&nbsp;forward benefits. Intrinsicly syndicate
-                an&nbsp;expanded array of&nbsp;processes and
-                <nobr>cross-unit</nobr> partnerships.
-              </p>
-              <p>
-                Efficiently plagiarize 24/365 action items and focused
-                infomediaries. Distinctively seize superior initiatives for
-                wireless technologies. Dynamically optimize.
-              </p>
-            </div>
+            <p>
+              Objectively transition extensive data rather than cross functional
+              solutions. Monotonectally syndicate multidisciplinary materials
+              before go&nbsp;forward benefits. Intrinsicly syndicate
+              an&nbsp;expanded array of&nbsp;processes and
+              cross-unit partnerships.
+            </p>
+            <p>
+              Efficiently plagiarize 24/365 action items and focused
+              infomediaries. Distinctively seize superior initiatives for
+              wireless technologies. Dynamically optimize.
+            </p>
+          </div>
         </div>
         <nav>
           <ul class="footer__nav__item">
