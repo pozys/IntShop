@@ -232,6 +232,10 @@ body {
   }
 }
 
+.search__browse-button-group:active {
+  @extend %dropDisplayFlex;
+}
+
 .search__browse-button {
   font-family: inherit;
   /*Шрифт перебивался другими стилями для класса button*/
@@ -284,6 +288,10 @@ body {
   box-sizing: border-box;
 }
 
+.drop-cover {
+  @include drop-cover-decoration(43px);
+}
+
 .header-cart {
   &:hover {
     @extend %dropDisplayFlex;
@@ -299,13 +307,14 @@ body {
     top: -14px;
     left: 0;
   }
+
+  &__drop-cover {
+    @include drop-cover-decoration(85px);
+  }
 }
 
-.header-cart > .drop:before {
+.header-cart .drop:before {
   @include drop-before(13px);
-}
-.header-cart > .drop {
-  @include drop-decoration(85px);
 }
 
 .menu {
@@ -349,8 +358,13 @@ body {
   }
 }
 
+
+
 .drop {
-  @include drop-decoration(43px);
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  @include drop-decoration();
 
   &:before {
     @include drop-before(59px);
@@ -400,15 +414,14 @@ body {
     opacity: 1;
   }
 }
-.menu__item:last-child .drop,
-.menu__item:nth-last-child(2) .drop,
-.menu__item:nth-last-child(3) .drop {
-  right: 0;
+.menu__item:last-child .drop-cover,
+.menu__item:nth-last-child(2) .drop-cover,
+.menu__item:nth-last-child(3) .drop-cover {
+  right: -31px;
+  justify-content: flex-end;
 }
 
-.search__browse-button-group:active {
-  @extend %dropDisplayFlex;
-}
+
 
 .drop__super-sale {
   background: url(img/super-sale.jpg) no-repeat;
@@ -442,10 +455,10 @@ body {
   top: -6px;
 }
 
-.search__browse-button-group > .drop {
-  @include drop-decoration(36px);
+.search__browse-button-group > .drop-cover {
+  @include drop-cover-decoration(36px);
 }
-.search__browse-button-group > .drop:before {
+.search__browse-button-group .drop:before {
   @include drop-before(63px);
 }
 
@@ -458,7 +471,7 @@ body {
 .menu__item:last-child .drop:before,
 .menu__item:nth-last-child(2) .drop:before,
 .menu__item:nth-last-child(3) .drop:before {
-  right: 59px;
+  right: 42px;
   left: auto;
 }
 .slider {
@@ -1617,7 +1630,7 @@ td > input[type="number"] {
     margin-bottom: $margin-for-checkOut-list__hr;
     position: relative;
 
-    &:after{
+    &:after {
       content: "";
       height: 1px;
       background: $backColor;

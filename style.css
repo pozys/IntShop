@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.header-cart:hover .drop, .menu__item:hover .drop, .search__browse-button-group:active .drop {
+.search__browse-button-group:active .drop-cover, .header-cart:hover .drop-cover, .menu__item:hover .drop-cover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -384,6 +384,16 @@ body {
           box-sizing: border-box;
 }
 
+.drop-cover {
+  display: none;
+  opacity: 0;
+  width: 100vh;
+  background: transparent;
+  position: absolute;
+  z-index: 1;
+  top: 43px;
+}
+
 .header-cart__drop:before {
   /*Невидимый блок, чтобы при наведении на корзину блок появлялся, и при снятии наведения фиксировался*/
   content: "";
@@ -395,7 +405,17 @@ body {
   left: 0;
 }
 
-.header-cart > .drop:before {
+.header-cart__drop-cover {
+  display: none;
+  opacity: 0;
+  width: 100vh;
+  background: transparent;
+  position: absolute;
+  z-index: 1;
+  top: 85px;
+}
+
+.header-cart .drop:before {
   content: "";
   position: absolute;
   width: 10px;
@@ -407,20 +427,6 @@ body {
           transform: rotate(45deg);
   top: -6px;
   left: 13px;
-}
-
-.header-cart > .drop {
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
-  padding: 15px 20px;
-  border-radius: 5px;
-  background-color: #ffffff;
-  text-align: left;
-  display: none;
-  opacity: 0;
-  position: absolute;
-  top: 85px;
-  z-index: 1;
 }
 
 .menu {
@@ -463,17 +469,19 @@ body {
 }
 
 .drop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
   padding: 15px 20px;
   border-radius: 5px;
   background-color: #ffffff;
   text-align: left;
-  display: none;
-  opacity: 0;
-  position: absolute;
-  top: 43px;
-  z-index: 1;
 }
 
 .drop:before {
@@ -537,10 +545,13 @@ body {
   opacity: 1;
 }
 
-.menu__item:last-child .drop,
-.menu__item:nth-last-child(2) .drop,
-.menu__item:nth-last-child(3) .drop {
-  right: 0;
+.menu__item:last-child .drop-cover,
+.menu__item:nth-last-child(2) .drop-cover,
+.menu__item:nth-last-child(3) .drop-cover {
+  right: -31px;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .drop__super-sale {
@@ -586,21 +597,17 @@ body {
   top: -6px;
 }
 
-.search__browse-button-group > .drop {
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
-  padding: 15px 20px;
-  border-radius: 5px;
-  background-color: #ffffff;
-  text-align: left;
+.search__browse-button-group > .drop-cover {
   display: none;
   opacity: 0;
+  width: 100vh;
+  background: transparent;
   position: absolute;
-  top: 36px;
   z-index: 1;
+  top: 36px;
 }
 
-.search__browse-button-group > .drop:before {
+.search__browse-button-group .drop:before {
   content: "";
   position: absolute;
   width: 10px;
@@ -623,7 +630,7 @@ body {
 .menu__item:last-child .drop:before,
 .menu__item:nth-last-child(2) .drop:before,
 .menu__item:nth-last-child(3) .drop:before {
-  right: 59px;
+  right: 42px;
   left: auto;
 }
 
