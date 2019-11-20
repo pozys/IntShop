@@ -358,8 +358,6 @@ body {
   }
 }
 
-
-
 .drop {
   display: flex;
   position: relative;
@@ -420,8 +418,6 @@ body {
   right: -31px;
   justify-content: flex-end;
 }
-
-
 
 .drop__super-sale {
   background: url(img/super-sale.jpg) no-repeat;
@@ -624,6 +620,12 @@ body {
     height: 364px;
     margin-bottom: 39px;
     background-color: #e9e9e9;
+    position: relative;
+    transition: transform $standart-transition-delay ease-out;
+
+    &:hover {
+      transform: scale($stansart-scale);
+    }
   }
 
   &__item,
@@ -643,17 +645,10 @@ body {
     box-sizing: border-box;
   }
 
-  &__image-block {
-    transition: transform $standart-transition-delay ease-out;
-
-    &:hover {
-      transform: scale($stansart-scale);
-    }
-  }
-
   &__block-hover {
-    position: relative;
+    position: absolute;
     display: none;
+    width: 261px;
   }
 
   &__white-border-transparent-button {
@@ -670,9 +665,10 @@ body {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.16);
   background-color: $backColor;
 }
-.featuredItems__item1 {
-  background-image: url(img/Featured-Items1.jpg);
-}
+
+// .featuredItems__item1 {
+//   background-image: url(img/Featured-Items1.jpg);
+// }
 .featuredItems__item2 {
   background-image: url(img/Featured-Items2.jpg);
 }

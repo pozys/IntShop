@@ -1,0 +1,19 @@
+{
+  "name": "intshop",
+  "version": "1.0.0",
+  "description": "Final project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pozys/IntShop.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pozys/IntShop/issues"
+  },
+  "homepage": "https://github.com/pozys/IntShop#readme"
+}
