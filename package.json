@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/pozys/IntShop/issues"
   },
-  "homepage": "https://github.com/pozys/IntShop#readme"
+  "homepage": "https://github.com/pozys/IntShop#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
