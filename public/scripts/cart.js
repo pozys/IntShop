@@ -1,14 +1,15 @@
 Vue.component("cart", {
   data() {
     return {
+      locationOrigin: location.origin,
       cartItems: [],
       catalogUrl: "/cart"
     };
   },
 
   methods: {
-    addToCart(item, count=1) {
-      item.count = count;
+    addToCart(item) {
+      item.count = item.count || 1;
       if (
         this.cartItems.find(cartEl => item.product_id === cartEl.product_id)
       ) {
@@ -29,6 +30,14 @@ Vue.component("cart", {
     deletefromCart(item) {
       this.$root
         .deleteJSON(`${API}${this.catalogUrl}`, JSON.stringify(item))
+        .then(data => {
+          this.cartItems = [...data];
+        });
+    },
+
+    clearCart() {
+      this.$root
+        .deleteJSON(`${API}${this.catalogUrl}/clearCart`)
         .then(data => {
           this.cartItems = [...data];
         });
@@ -69,11 +78,11 @@ Vue.component("cart", {
      >
        Checkout
      </a>
-     <button
+     <a :href="locationOrigin+'/shopping_cart.html'"
        class="greyBorderButton greyBorderButton_forHeader-cart"
      >
        Go to cart
-     </button>
+     </a>
    </div>
  </li>
  </ul>`
@@ -87,7 +96,7 @@ Vue.component("cart-item", {
     };
   },
 
-  props: {    
+  props: {
     product: {},
     img: {
       default: "https://placehold.it/140x150"

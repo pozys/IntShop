@@ -5,8 +5,7 @@ Vue.component("single-page", {
       APIname: "/product",
       visibleCount: 0,
       limitIndex: 0,
-      product: { name: "" },
-      count: 1
+      product: { name: "", color: "black", size: "l", count: 1 }
     };
   },
 
@@ -15,6 +14,7 @@ Vue.component("single-page", {
       .getJSON(`${API + this.APIname + location.search}`)
       .then(data => {
         Object.assign(this.product, data);
+        this.product.count = 1;
       })
       .catch(error => console.log(error));
   },
@@ -24,6 +24,7 @@ Vue.component("single-page", {
   <a href="#" class="arrow"><i class="fas fa-angle-left"></i></a><img :src="product.img" :alt='product.name' class="imageSlide__img"></img>
   <a href="#" class="arrow"><i class="fas fa-angle-right"></i></a>
   </div>
+  <main class="container productDescription-parent">
   <div class="productDescription-child">
         <section class="productDescription">
           <div class="productDescription__nav">
@@ -61,6 +62,7 @@ Vue.component("single-page", {
                   class="select choose-items__select select_forChooseItem"
                   name="size"
                   id="size"
+                  v-model='product.color'
                   ><option value="red">Red</option>
                   <option value="black">Black</option>
                   <option value="white">White</option></select
@@ -71,6 +73,7 @@ Vue.component("single-page", {
                   class="select choose-items__select select_forChooseItem"
                   name="color"
                   id="color"
+                  v-model='product.size'
                   ><option value="xxl">XXL</option>
                   <option value="xl">XL</option>
                   <option value="l">L</option>
@@ -83,13 +86,12 @@ Vue.component("single-page", {
                   type="number"
                   name="quantity"
                   min=1
-                  placeholder="1"
                   id="quantity"
-                  v-model='count'
+                  v-model.number='product.count'
                 />
               </div>
             </div>
-            <button @click.prevent='cartAPI.addToCart(product, count)'
+            <button @click.prevent='cartAPI.addToCart(product)'
               class="pink-border-button pink-border-button_for-choose-group"
             >
               <img src="img/pink-cart.svg" alt="cart" class="pinkCart" />Add to
@@ -98,5 +100,7 @@ Vue.component("single-page", {
           </form>
         </section>
       </div>
-      </div>`
+      </main>
+      </div>
+      `
 });

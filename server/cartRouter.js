@@ -25,7 +25,9 @@ router.put("/", (req, res) => {
     } else {
       let cart = JSON.parse(data);
       foundItem = cart.find(item => req.body.product_id === item.product_id);
-      foundItem.count += +req.body.count;
+      let finalCount = (foundItem.count += req.body.count);
+      Object.assign(foundItem, req.body);
+      foundItem.count = finalCount;
       fs.writeFile(cartPath, JSON.stringify(cart), err => {
         if (err) {
         } else {
@@ -45,6 +47,22 @@ router.delete("/", (req, res) => {
         cart.findIndex(item => req.body.product_id === item.product_id),
         1
       );
+      fs.writeFile(cartPath, JSON.stringify(cart), err => {
+        if (err) {
+        } else {
+          res.send(`${JSON.stringify(cart)}`);
+        }
+      });
+    }
+  });
+});
+
+router.delete("/clearCart", (req, res) => {
+  fs.readFile(cartPath, "utf-8", (err, data) => {
+    if (err) {
+    } else {
+      let cart = JSON.parse(data);
+      cart = [];
       fs.writeFile(cartPath, JSON.stringify(cart), err => {
         if (err) {
         } else {
