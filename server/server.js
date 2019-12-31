@@ -8,12 +8,42 @@ const app = express();
 app.use(express.json());
 app.use("/", express.static("./public"));
 app.use(`/api/cart`, cartRouter);
-app.get("/api/products", (req, res) => {
+app.get("/api/products/:sortType/:limitIndex/:visibleCount", (req, res) => {
+  console.log(req.params);
   fs.readFile(productsFile, (err, data) => {
     if (err) {
       console.log(err);
     } else {
-      res.send(data);
+      dataObj = JSON.parse(data);
+      if (!req.params.sortType || req.params.sortType === "default") {
+        // dataObj.slice(req.params.limitIndex, req.params.visibleCount-1);
+      } else {
+        switch (req.params.sortType) {
+          case "name":
+            dataObj.sort(function(a, b) {
+              if (a.name > b.name) {
+                return 1;
+              }
+              if (a.name < b.name) {
+                return -1;
+              }
+              return 0;
+            });
+            break;
+          case "price":
+            dataObj.sort(function(a, b) {
+              if (a.price > b.price) {
+                return 1;
+              }
+              if (a.price < b.price) {
+                return -1;
+              }
+              return 0;
+            });
+            break;
+        }
+      }
+      res.send(JSON.stringify(dataObj.slice(req.params.limitIndex, req.params.visibleCount)));
     }
   });
 });

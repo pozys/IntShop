@@ -11,7 +11,7 @@
   {
     "product_id": 2,
     "name": "Mango People T-shirt",
-    "price": 60.00,
+    "price": 60.0,
     "img": "img/Featured-Items2.jpg",
     "count": 0,
     "designer": "BIN BURHAN",
@@ -29,7 +29,7 @@
   {
     "product_id": 4,
     "name": "Mango People T-shirt",
-    "price": 77.00,
+    "price": 77.0,
     "img": "img/Featured-Items4.jpg",
     "count": 0,
     "designer": "BIN BURHAN",
@@ -38,7 +38,7 @@
   {
     "product_id": 5,
     "name": "Mango People T-shirt",
-    "price": 67.70,
+    "price": 67.7,
     "img": "img/Featured-Items5.jpg",
     "count": 0,
     "designer": "BIN BURHAN",
@@ -67,6 +67,15 @@
     "name": "Mango People T-shirt",
     "price": 98.01,
     "img": "img/Featured-Items8.jpg",
+    "count": 0,
+    "designer": "BIN BURHAN",
+    "material": "cotton"
+  },
+  {
+    "product_id": 9,
+    "name": "Mango People T-shirt",
+    "price": 565.02,
+    "img": "img/Featured-Items9.jpg",
     "count": 0,
     "designer": "BIN BURHAN",
     "material": "cotton"
