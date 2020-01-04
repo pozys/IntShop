@@ -1,0 +1,83 @@
+[
+  {
+    "product_id": 1,
+    "name": "Mango People T-shirt",
+    "price": 55.02,
+    "img": "img/static/Featured-Items1.jpg",
+    "count": 0,
+    "designer": "BIN BURHAN",
+    "material": "cotton"
+  },
+  {
+    "product_id": 2,
+    "name": "Mango People T-shirt",
+    "price": 60.0,
+    "img": "img/static/Featured-Items2.jpg",
+    "count": 0,
+    "designer": "BIN BURHAN",
+    "material": "cotton"
+  },
+  {
+    "product_id": 3,
+    "name": "Mango People T-shirt",
+    "price": 150.67,
+    "img": "img/static/Featured-Items3.jpg",
+    "count": 0,
+    "designer": "BIN BURHAN",
+    "material": "cotton"
+  },
+  {
+    "product_id": 4,
+    "name": "Mango People T-shirt",
+    "price": 77.0,
+    "img": "img/static/Featured-Items4.jpg",
+    "count": 0,
+    "designer": "BIN BURHAN",
+    "material": "cotton"
+  },
+  {
+    "product_id": 5,
+    "name": "Mango People T-shirt",
+    "price": 67.7,
+    "img": "img/static/Featured-Items5.jpg",
+    "count": 0,
+    "designer": "BIN BURHAN",
+    "material": "cotton"
+  },
+  {
+    "product_id": 6,
+    "name": "Mango People T-shirt",
+    "price": 59.99,
+    "img": "img/static/Featured-Items6.jpg",
+    "count": 0,
+    "designer": "BIN BURHAN",
+    "material": "cotton"
+  },
+  {
+    "product_id": 7,
+    "name": "Mango People T-shirt",
+    "price": 45.23,
+    "img": "img/static/Featured-Items7.jpg",
+    "count": 0,
+    "designer": "BIN BURHAN",
+    "material": "cotton"
+  },
+  {
+    "product_id": 8,
+    "name": "Mango People T-shirt",
+    "price": 98.01,
+    "img": "img/static/Featured-Items8.jpg",
+    "count": 0,
+    "designer": "BIN BURHAN",
+    "material": "cotton"
+  },
+  {
+    "product_id": 9,
+    "name": "Mango People T-shirt",
+    "price": 565.02,
+    "img": "img/static/Featured-Items9.jpg",
+    "count": 0,
+    "designer": "BIN BURHAN",
+    "material": "cotton"
+  }
+]
